@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1A3DDB66-0155-4C26-9EAC-72037FA85C3C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WinUX</RootNamespace>
+    <AssemblyName>WinUX.Common</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile44</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\WinUX.Common.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\DescriptionAttribute.cs" />
+    <Compile Include="Collections\Generic\GenericEqualityComparer.cs" />
+    <Compile Include="Collections\Generic\LimitedList.cs" />
+    <Compile Include="Collections\ObjectModel\NotifyCollectionItemPropertyChanged.cs" />
+    <Compile Include="Collections\ObjectModel\ObservableItemCollection.cs" />
+    <Compile Include="Common\Date\StateOfDay.cs" />
+    <Compile Include="Maths\MathConstants.cs" />
+    <Compile Include="Common\ParseHelper.cs" />
+    <Compile Include="Common\WeakReferenceCallback.cs" />
+    <Compile Include="Common\WeakEventListener.cs" />
+    <Compile Include="Data\ConditionalOperator.cs" />
+    <Compile Include="Data\Serialization\ISerializationService.cs" />
+    <Compile Include="Data\Serialization\JsonSerializationService.cs" />
+    <Compile Include="Data\Serialization\SerializationFormatting.cs" />
+    <Compile Include="Data\Serialization\SerializationService.cs" />
+    <Compile Include="Data\Validation\Rules\DateTimeValidationRule.cs" />
+    <Compile Include="Data\Validation\Rules\DecimalValidationRule.cs" />
+    <Compile Include="Data\Validation\Rules\DoubleValidationRule.cs" />
+    <Compile Include="Data\Validation\Rules\EmailValidationRule.cs" />
+    <Compile Include="Data\Validation\Rules\IntValidationRule.cs" />
+    <Compile Include="Data\Validation\Rules\RegexValidationRule.cs" />
+    <Compile Include="Data\Validation\Rules\UrlValidationRule.cs" />
+    <Compile Include="Data\Validation\ValidationRule.cs" />
+    <Compile Include="Data\Validation\ValidationRules.cs" />
+    <Compile Include="Data\ValueChanged.cs" />
+    <Compile Include="Diagnostics\Tracing\EventLogger.cs" />
+    <Compile Include="Exceptions\UnexpectedNullPropertyException.cs" />
+    <Compile Include="Extensions\Extensions.Attribute.cs" />
+    <Compile Include="Extensions\Extensions.Collection.cs" />
+    <Compile Include="Extensions\Extensions.DateTime.cs" />
+    <Compile Include="Extensions\Extensions.Dictionary.cs" />
+    <Compile Include="Extensions\Extensions.Files.cs" />
+    <Compile Include="Extensions\Extensions.Geography.cs" />
+    <Compile Include="Extensions\Extensions.Linq.cs" />
+    <Compile Include="Extensions\Extensions.Math.cs" />
+    <Compile Include="Extensions\Extensions.Reflection.cs" />
+    <Compile Include="Extensions\Extensions.String.cs" />
+    <Compile Include="Extensions\Extensions.Type.cs" />
+    <Compile Include="Extensions\Extensions.Url.cs" />
+    <Compile Include="Maths\MathHelper.cs" />
+    <Compile Include="Maths\NanUnion.cs" />
+    <Compile Include="Maths\UnitOfMeasure.cs" />
+    <Compile Include="Mvvm\IBindable.cs" />
+    <Compile Include="Networking\NetworkRequestManager.cs" />
+    <Compile Include="Networking\Requests\NetworkRequest.cs" />
+    <Compile Include="Networking\Requests\NetworkRequestCallback.cs" />
+    <Compile Include="Networking\Requests\Json\JsonDeleteNetworkRequest.cs" />
+    <Compile Include="Networking\Requests\Json\JsonGetNetworkRequest.cs" />
+    <Compile Include="Networking\Requests\Json\JsonPostNetworkRequest.cs" />
+    <Compile Include="Networking\Requests\Json\JsonPutNetworkRequest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\IServiceManager.cs" />
+    <Compile Include="Services\ServiceChanged.cs" />
+    <Compile Include="Storage\FileSizeFormat.cs" />
+    <Compile Include="Threading\SynchronizationContextHelper.cs" />
+    <Compile Include="Threading\Tasks\TaskSchedulerAwaiter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extensions\Extensions.Conversions.cs" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
