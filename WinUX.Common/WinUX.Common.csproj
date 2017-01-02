@@ -60,7 +60,6 @@
     <Compile Include="Data\Validation\ValidationRule.cs" />
     <Compile Include="Data\Validation\ValidationRules.cs" />
     <Compile Include="Data\ValueChanged.cs" />
-    <Compile Include="Diagnostics\Tracing\EventLogger.cs" />
     <Compile Include="Exceptions\UnexpectedNullPropertyException.cs" />
     <Compile Include="Extensions\Extensions.Attribute.cs" />
     <Compile Include="Extensions\Extensions.Collection.cs" />
@@ -78,6 +77,7 @@
     <Compile Include="Maths\NanUnion.cs" />
     <Compile Include="Maths\UnitOfMeasure.cs" />
     <Compile Include="Mvvm\IBindable.cs" />
+    <Compile Include="Networking\INetworkRequestManager.cs" />
     <Compile Include="Networking\NetworkRequestManager.cs" />
     <Compile Include="Networking\Requests\NetworkRequest.cs" />
     <Compile Include="Networking\Requests\NetworkRequestCallback.cs" />

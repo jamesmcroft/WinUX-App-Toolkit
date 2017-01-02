@@ -1,4 +1,4 @@
-﻿namespace WinUX.Diagnostics.Tracing
+﻿namespace WinUX.UWP.Diagnostics.Tracing
 {
     using System.Diagnostics.Tracing;
 
@@ -13,10 +13,10 @@
         public static readonly EventLogger Current = new EventLogger();
 
         /// <summary>
-        /// Writes a debug event to the log.
+        /// Writes a debug information message to the event log.
         /// </summary>
         /// <param name="message">
-        /// The debug message to write out.
+        /// The debug information message to write out.
         /// </param>
         /// <remarks>
         /// This will only write out if the application is running in debug mode.
@@ -31,10 +31,10 @@
         }
 
         /// <summary>
-        /// Writes an informational event to the log.
+        /// Writes a generic information message to the event log.
         /// </summary>
         /// <param name="message">
-        /// The informational message to write out.
+        /// The generic information message to write out.
         /// </param>
         [Event(2, Message = "Info: {0}", Level = EventLevel.Informational)]
         public void WriteInfo(string message)
@@ -46,7 +46,7 @@
         }
 
         /// <summary>
-        /// Writes a warning event to the log.
+        /// Writes a warning message to the event log.
         /// </summary>
         /// <param name="message">
         /// The warning message to write out.
@@ -61,7 +61,7 @@
         }
 
         /// <summary>
-        /// Writes an error event to the log.
+        /// Writes an error message to the event log.
         /// </summary>
         /// <param name="message">
         /// The error message to write out.
@@ -76,7 +76,7 @@
         }
 
         /// <summary>
-        /// Writes a critical event to the log.
+        /// Writes a critical message to the event log.
         /// </summary>
         /// <param name="message">
         /// The critical message to write out.

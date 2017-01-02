@@ -106,12 +106,126 @@
     <ErrorReport>prompt</ErrorReport>
     <DocumentationFile>bin\x64\Release\WinUX.UWP.XML</DocumentationFile>
   </PropertyGroup>
+  <PropertyGroup Label="MultilingualAppToolkit">
+    <MultilingualAppToolkitVersion>4.0</MultilingualAppToolkitVersion>
+    <MultilingualFallbackLanguage>en-US</MultilingualFallbackLanguage>
+    <TranslationReport Condition="'$(Configuration)' == 'Release'">true</TranslationReport>
+    <SuppressPseudoWarning Condition="'$(Configuration)' == 'Debug'">true</SuppressPseudoWarning>
+  </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationModel\Lifecycle\IAppLifecycleManager.cs" />
+    <Compile Include="ApplicationModel\Lifecycle\ISuspendable.cs" />
+    <Compile Include="ApplicationModel\Lifecycle\AppLifecycleManager.cs" />
+    <Compile Include="ApplicationModel\Resources\ResourceHelper.cs" />
+    <Compile Include="Application\AppPackageFamilyNames.cs" />
+    <Compile Include="Application\AppLauncher.cs" />
+    <Compile Include="Application\ViewManagement\ViewCoreDispatcherManager.cs" />
+    <Compile Include="Application\ViewManagement\ViewMessageDialogManager.cs" />
+    <Compile Include="Application\ViewManagement\ViewNavigationServiceManager.cs" />
+    <Compile Include="Application\ViewManagement\ViewServiceChanged.cs" />
+    <Compile Include="Application\ViewManagement\ViewServiceManager.cs" />
+    <Compile Include="Application\ViewManagement\WindowHelper.cs" />
+    <Compile Include="Collections\ObjectModel\LocalIncrementalLoadingCollection.cs" />
+    <Compile Include="Collections\ObjectModel\ObservableDictionary.cs" />
+    <Compile Include="Collections\ObjectModel\ObservableDictionaryChanged.cs" />
+    <Compile Include="Controls\ListViewBase\Extensions\Extensions.ItemClickCommand.cs" />
+    <Compile Include="Controls\ListViewBase\ScrollToMode.cs" />
+    <Compile Include="Controls\MapElement\Extensions\Extensions.Data.cs" />
+    <Compile Include="Controls\ScrollViewer\ScrollViewerMode.cs" />
+    <Compile Include="Controls\ToggleButton\Extensions\Extensions.Grouping.cs" />
+    <Compile Include="Design\AccentColor.cs" />
+    <Compile Include="Design\Material\ColorSwatches\IMaterialColorSwatch.cs" />
+    <Compile Include="Design\Material\MaterialDesignColors.cs" />
+    <Compile Include="Design\Material\ColorSwatches\AmberColorSwatch.cs" />
+    <Compile Include="Design\Material\ColorSwatches\BlueColorSwatch.cs" />
+    <Compile Include="Design\Material\ColorSwatches\BlueGreyColorSwatch.cs" />
+    <Compile Include="Design\Material\ColorSwatches\BrownColorSwatch.cs" />
+    <Compile Include="Design\Material\ColorSwatches\CyanColorSwatch.cs" />
+    <Compile Include="Design\Material\ColorSwatches\DeepOrangeColorSwatch.cs" />
+    <Compile Include="Design\Material\ColorSwatches\DeepPurpleColorSwatch.cs" />
+    <Compile Include="Design\Material\ColorSwatches\GreenColorSwatch.cs" />
+    <Compile Include="Design\Material\ColorSwatches\GreyColorSwatch.cs" />
+    <Compile Include="Design\Material\ColorSwatches\IndigoColorSwatch.cs" />
+    <Compile Include="Design\Material\ColorSwatches\LightBlueColorSwatch.cs" />
+    <Compile Include="Design\Material\ColorSwatches\LightGreenColorSwatch.cs" />
+    <Compile Include="Design\Material\ColorSwatches\LimeColorSwatch.cs" />
+    <Compile Include="Design\Material\ColorSwatches\OrangeColorSwatch.cs" />
+    <Compile Include="Design\Material\ColorSwatches\PinkColorSwatch.cs" />
+    <Compile Include="Design\Material\ColorSwatches\PurpleColorSwatch.cs" />
+    <Compile Include="Design\Material\ColorSwatches\RedColorSwatch.cs" />
+    <Compile Include="Design\Material\ColorSwatches\TealColorSwatch.cs" />
+    <Compile Include="Design\Material\ColorSwatches\YellowColorSwatch.cs" />
+    <Compile Include="Device\Profile\DeviceType.cs" />
+    <Compile Include="Device\Sensors\LuxHelper.cs" />
+    <Compile Include="Diagnostics\AppDiagnostics.cs" />
+    <Compile Include="Diagnostics\IAppDiagnostics.cs" />
+    <Compile Include="Diagnostics\Tracing\EventLogger.cs" />
+    <Compile Include="Diagnostics\Tracing\StorageFileEventListener.cs" />
+    <Compile Include="Extensions\Extensions.Color.cs" />
+    <Compile Include="Extensions\Extensions.DependencyObject.cs" />
+    <Compile Include="Extensions\Extensions.Device.cs" />
+    <Compile Include="Extensions\Extensions.Display.cs" />
+    <Compile Include="Extensions\Extensions.Geography.cs" />
+    <Compile Include="Extensions\Extensions.Image.cs" />
+    <Compile Include="Extensions\Extensions.Inking.cs" />
+    <Compile Include="Extensions\Extensions.Input.cs" />
+    <Compile Include="Extensions\Extensions.Keyboard.cs" />
+    <Compile Include="Extensions\Extensions.ListView.cs" />
+    <Compile Include="Extensions\Extensions.Manipulation.cs" />
+    <Compile Include="Extensions\Extensions.Networking.cs" />
+    <Compile Include="Extensions\Extensions.ScrollViewer.cs" />
+    <Compile Include="Extensions\Extensions.Security.cs" />
+    <Compile Include="Extensions\Extensions.Speech.cs" />
+    <Compile Include="Extensions\Extensions.StorageFile.cs" />
+    <Compile Include="Extensions\Extensions.Streams.cs" />
+    <Compile Include="Extensions\Extensions.Type.cs" />
+    <Compile Include="Extensions\Extensions.VisualTree.cs" />
+    <Compile Include="Extensions\Extensions.Xaml.cs" />
+    <Compile Include="Input\Inking\InkChanged.cs" />
+    <Compile Include="Input\Inking\InkPointer.cs" />
+    <Compile Include="Input\Inking\InkRendered.cs" />
+    <Compile Include="Input\Manipulation\SwipeAxis.cs" />
+    <Compile Include="Input\Manipulation\SwipeDirection.cs" />
+    <Compile Include="Input\Pointer\PenEventType.cs" />
+    <Compile Include="Input\Speech\SpeechCommand.cs" />
+    <Compile Include="Maths\OrientedSize.cs" />
+    <Compile Include="Messaging\Dialogs\MessageDialogHelper.cs" />
+    <Compile Include="Mvvm\BindableBase.cs" />
+    <Compile Include="Mvvm\Input\DelegateCommand.cs" />
+    <Compile Include="Mvvm\Input\DelegateCommand{T}.cs" />
+    <Compile Include="Mvvm\Services\INavigationService.cs" />
+    <Compile Include="Mvvm\Services\NavigationService.cs" />
+    <Compile Include="Mvvm\Services\ViewModelCache.cs" />
+    <Compile Include="Networking\INetworkStatusManager.cs" />
+    <Compile Include="Networking\MobileNetworkConnectionType.cs" />
+    <Compile Include="Networking\NetworkConnectionType.cs" />
+    <Compile Include="Networking\NetworkStatus.cs" />
+    <Compile Include="Networking\NetworkStatusChanged.cs" />
+    <Compile Include="Networking\NetworkStatusManager.cs" />
+    <Compile Include="Networking\Requests\Json\JsonDeleteNetworkRequest.cs" />
+    <Compile Include="Networking\Requests\Json\JsonGetNetworkRequest.cs" />
+    <Compile Include="Networking\Requests\Json\JsonPatchNetworkRequest.cs" />
+    <Compile Include="Networking\Requests\Json\JsonPostNetworkRequest.cs" />
+    <Compile Include="Networking\Requests\Json\JsonPutNetworkRequest.cs" />
+    <Compile Include="Networking\Requests\Streams\StreamGetNetworkRequest.cs" />
+    <Compile Include="Networking\WindowsNetworkRequestManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\Data\DataEncryptException.cs" />
+    <Compile Include="Security\Data\DataEncryptionService.cs" />
+    <Compile Include="Services\Jobs\Job.cs" />
+    <Compile Include="Services\Jobs\JobManager.cs" />
+    <Compile Include="Services\Jobs\JobReferenceLostException.cs" />
+    <Compile Include="Storage\StorageFileProperty.cs" />
+    <Compile Include="Storage\StorageFolders.cs" />
+    <Compile Include="Storage\StorageHelper.cs" />
+    <Compile Include="Storage\Streams\StorageStreamHelper.cs" />
+    <Compile Include="Xaml\AdaptiveState.cs" />
+    <Compile Include="Xaml\DependencyPropertyListener.cs" />
+    <Compile Include="Xaml\UIDispatcher.cs" />
     <EmbeddedResource Include="Properties\WinUX.UWP.rd.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -120,10 +234,15 @@
       <Name>WinUX.Common</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.PriResources.targets" Label="MultilingualAppToolkit" Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\v$(MultilingualAppToolkitVersion)\Microsoft.Multilingual.PriResources.targets')" />
+  <Target Name="MATPrerequisite" BeforeTargets="PrepareForBuild" Condition="!Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.PriResources.targets')" Label="MultilingualAppToolkit">
+    <Warning Text="$(MSBuildProjectFile) is Multilingual build enabled, but the Multilingual App Toolkit is unavailable during the build. If building with Visual Studio, please check to ensure that toolkit is properly installed." />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

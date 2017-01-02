@@ -1,4 +1,4 @@
-﻿namespace WinUX.Networking
+﻿namespace WinUX.UWP.Networking
 {
     using System;
     using System.Collections.Concurrent;
@@ -7,24 +7,30 @@
     using System.Threading;
     using System.Threading.Tasks;
 
+    using Windows.UI.Xaml;
+
     using WinUX.Common;
+    using WinUX.Networking;
     using WinUX.Networking.Requests;
 
     /// <summary>
-    /// Defines a manager for executing queued network requests.
+    /// Defines a helper for managing network requests using Windows APIs.
     /// </summary>
-    public sealed class NetworkRequestManager : INetworkRequestManager
+    public sealed class WindowsNetworkRequestManager : INetworkRequestManager
     {
-        private Timer processTimer;
+        private readonly DispatcherTimer processTimer;
 
         private bool isProcessingRequests;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="NetworkRequestManager"/> class.
+        /// Initializes a new instance of the <see cref="WindowsNetworkRequestManager"/> class.
         /// </summary>
-        public NetworkRequestManager()
+        public WindowsNetworkRequestManager()
         {
             this.CurrentQueue = new ConcurrentDictionary<string, NetworkRequestCallback>();
+
+            this.processTimer = new DispatcherTimer { Interval = TimeSpan.FromMinutes(1) };
+            this.processTimer.Tick += (sender, o) => this.ProcessCurrentQueue();
         }
 
         /// <inheritdoc />
@@ -39,24 +45,21 @@
         /// <inheritdoc />
         public void Start(TimeSpan processPeriod)
         {
-            if (this.processTimer == null)
+            this.processTimer.Interval = processPeriod;
+
+            if (!this.processTimer.IsEnabled)
             {
-                this.processTimer = new Timer(
-                    state => this.ProcessCurrentQueue(),
-                    null,
-                    TimeSpan.FromMinutes(0),
-                    processPeriod);
-            }
-            else
-            {
-                this.processTimer.Change(TimeSpan.FromMinutes(0), processPeriod);
+                this.processTimer.Start();
             }
         }
 
         /// <inheritdoc />
         public void Stop()
         {
-            this.processTimer?.Change(Timeout.InfiniteTimeSpan, Timeout.InfiniteTimeSpan);
+            if (this.processTimer.IsEnabled)
+            {
+                this.processTimer.Stop();
+            }
         }
 
         /// <inheritdoc />
