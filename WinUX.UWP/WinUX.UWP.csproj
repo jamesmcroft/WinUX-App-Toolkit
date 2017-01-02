@@ -216,6 +216,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Security\Data\DataEncryptException.cs" />
     <Compile Include="Security\Data\DataEncryptionService.cs" />
+    <Compile Include="Security\Data\IDataEncryptionService.cs" />
     <Compile Include="Services\Jobs\Job.cs" />
     <Compile Include="Services\Jobs\JobManager.cs" />
     <Compile Include="Services\Jobs\JobReferenceLostException.cs" />

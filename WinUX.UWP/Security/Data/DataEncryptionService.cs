@@ -10,38 +10,23 @@
     /// <summary>
     /// Defines a service for encrypting and decrypting data.
     /// </summary>
-    public sealed class DataEncryptionService
+    public sealed class DataEncryptionService : IDataEncryptionService
     {
-        private readonly string encryptionAlgorithm = SymmetricAlgorithmNames.AesEcbPkcs7;
+        private string encryptionAlgorithm;
 
-        private IBuffer KeyBuffer { get; set; }
+        private IBuffer keyHash;
 
-        /// <summary>
-        /// Initializes the data encryption service.
-        /// </summary>
-        /// <remarks>
-        /// This method must be called before attempting to encrypt/decrypt data.
-        /// </remarks>
-        /// <param name="key">
-        /// A key to encrypt/decrypt with.
-        /// </param>
-        public void Initialize(string key)
+        /// <inheritdoc />
+        public void Initialize(string algorithm, string key)
         {
-            this.KeyBuffer = HashText(key, HashAlgorithmNames.Md5);
+            this.encryptionAlgorithm = algorithm;
+            this.keyHash = HashData(key, HashAlgorithmNames.Md5);
         }
 
-        /// <summary>
-        /// Encrypts a byte array.
-        /// </summary>
-        /// <param name="bytes">
-        /// The bytes to encrypt.
-        /// </param>
-        /// <returns>
-        /// Returns the encrypted data.
-        /// </returns>
-        public async Task<IBuffer> EncryptAsync(byte[] bytes)
+        /// <inheritdoc />
+        public async Task<IBuffer> EncryptAsync(byte[] data)
         {
-            if (this.KeyBuffer == null)
+            if (this.keyHash == null)
             {
                 throw new InvalidOperationException("Cannot encrypt data before Initialize has been called.");
             }
@@ -51,9 +36,9 @@
                            {
                                try
                                {
-                                   var buffer = CryptographicBuffer.CreateFromByteArray(bytes);
+                                   var buffer = CryptographicBuffer.CreateFromByteArray(data);
                                    var aes = SymmetricKeyAlgorithmProvider.OpenAlgorithm(this.encryptionAlgorithm);
-                                   var key = this.KeyBuffer;
+                                   var key = this.keyHash;
                                    var cryptoKey = aes.CreateSymmetricKey(key);
                                    return CryptographicEngine.Encrypt(cryptoKey, buffer, null);
                                }
@@ -64,23 +49,15 @@
                            });
         }
 
-        /// <summary>
-        /// Decrypts a data buffer.
-        /// </summary>
-        /// <param name="buffer">
-        /// The data buffer to decrypt.
-        /// </param>
-        /// <returns>
-        /// Returns the decrypted data.
-        /// </returns>
-        public async Task<IBuffer> DecryptAsync(IBuffer buffer)
+        /// <inheritdoc />
+        public async Task<IBuffer> DecryptAsync(IBuffer data)
         {
-            if (this.KeyBuffer == null)
+            if (this.keyHash == null)
             {
                 throw new InvalidOperationException("Cannot encrypt data before Initialize has been called.");
             }
 
-            if (buffer == null) throw new ArgumentNullException(nameof(buffer));
+            if (data == null) throw new ArgumentNullException(nameof(data));
 
             return await Task.Run(
                        () =>
@@ -88,9 +65,9 @@
                                try
                                {
                                    var aes = SymmetricKeyAlgorithmProvider.OpenAlgorithm(this.encryptionAlgorithm);
-                                   var key = this.KeyBuffer;
+                                   var key = this.keyHash;
                                    var cryptoKey = aes.CreateSymmetricKey(key);
-                                   var decrypted = CryptographicEngine.Decrypt(cryptoKey, buffer, null);
+                                   var decrypted = CryptographicEngine.Decrypt(cryptoKey, data, null);
                                    return decrypted;
                                }
                                catch (Exception ex)
@@ -100,11 +77,11 @@
                            });
         }
 
-        private static IBuffer HashText(string text, string algorithm)
+        private static IBuffer HashData(string data, string algorithm)
         {
-            if (string.IsNullOrWhiteSpace(text)) return null;
+            if (string.IsNullOrWhiteSpace(data)) return null;
 
-            var buffUtf8Msg = CryptographicBuffer.ConvertStringToBinary(text, BinaryStringEncoding.Utf8);
+            var buffUtf8Msg = CryptographicBuffer.ConvertStringToBinary(data, BinaryStringEncoding.Utf8);
             var objAlgProv = HashAlgorithmProvider.OpenAlgorithm(algorithm);
             var buffHash = objAlgProv.HashData(buffUtf8Msg);
             return buffHash.Length != objAlgProv.HashLength ? null : buffHash;
