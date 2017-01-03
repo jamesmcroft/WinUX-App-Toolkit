@@ -9,8 +9,6 @@
     using Windows.UI.Core;
     using Windows.UI.Xaml;
 
-    using WinUX.Extensions;
-
     /// <summary>
     /// Defines a bindable base class.
     /// </summary>

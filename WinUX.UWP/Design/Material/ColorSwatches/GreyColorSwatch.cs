@@ -4,8 +4,6 @@
 
     using Windows.UI;
 
-    using WinUX.Extensions;
-
     internal sealed class GreyColorSwatch : IMaterialColorSwatch
     {
         public Color Color50 => "#fafafa".ToColor();

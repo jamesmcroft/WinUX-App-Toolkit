@@ -5,8 +5,6 @@
 
     using Windows.Media.SpeechRecognition;
 
-    using WinUX.Extensions;
-
     /// <summary>
     /// Defines a model for a speech command.
     /// </summary>

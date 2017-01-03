@@ -4,6 +4,8 @@
     using Windows.Graphics.Display;
     using Windows.UI.Xaml;
 
+    using WinUX.Device.Profile;
+
     /// <summary>
     /// Defines the properties for the <see cref="DeviceTrigger"/>.
     /// </summary>

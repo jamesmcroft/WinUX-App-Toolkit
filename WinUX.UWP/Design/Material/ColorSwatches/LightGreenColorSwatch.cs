@@ -2,8 +2,6 @@
 {
     using Windows.UI;
 
-    using WinUX.Extensions;
-
     internal sealed class LightGreenColorSwatch : IMaterialColorSwatch
     {
         public Color Color50 => "#f1f8e9".ToColor();

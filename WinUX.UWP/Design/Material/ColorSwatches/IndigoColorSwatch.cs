@@ -2,8 +2,6 @@
 {
     using Windows.UI;
 
-    using WinUX.Extensions;
-
     internal sealed class IndigoColorSwatch : IMaterialColorSwatch
     {
         public Color Color50 => "#e8eaf6".ToColor();

@@ -19,7 +19,6 @@
     using WinUX.Device.Profile;
     using WinUX.Diagnostics.Tracing;
     using WinUX.Exceptions;
-    using WinUX.Extensions;
     using WinUX.Messaging.Dialogs;
     using WinUX.Mvvm.Services;
 

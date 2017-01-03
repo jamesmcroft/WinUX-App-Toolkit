@@ -6,8 +6,6 @@
     using Windows.UI.Xaml.Controls;
     using Windows.UI.Xaml.Controls.Primitives;
 
-    using WinUX.Extensions;
-
     /// <summary>
     /// Defines an extension to the <see cref="ToggleButton"/> control to add grouping support similar to <see cref="RadioButton"/>.
     /// </summary>

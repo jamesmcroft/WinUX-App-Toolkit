@@ -2,8 +2,6 @@
 {
     using Windows.UI;
 
-    using WinUX.Extensions;
-
     internal sealed class PinkColorSwatch : IMaterialColorSwatch
     {
         public Color Color50 => "#fce4ec".ToColor();

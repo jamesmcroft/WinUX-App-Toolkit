@@ -4,8 +4,6 @@
 
     using Windows.UI;
 
-    using WinUX.Extensions;
-
     /// <summary>
     /// Defines the blue-grey material design color swatch.
     /// </summary>

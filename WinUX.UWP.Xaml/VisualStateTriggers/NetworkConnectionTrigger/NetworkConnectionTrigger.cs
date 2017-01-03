@@ -6,6 +6,7 @@
     using Windows.UI.Core;
 
     using WinUX.Common;
+    using WinUX.Networking;
 
     /// <summary>
     /// Defines a visual state trigger that checks a network connection type is in a specified state.

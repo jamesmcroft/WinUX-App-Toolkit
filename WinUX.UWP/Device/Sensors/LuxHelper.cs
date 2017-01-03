@@ -6,7 +6,6 @@
     using Windows.UI.Xaml;
 
     using WinUX.Common.Date;
-    using WinUX.Extensions;
 
     /// <summary>
     /// Defines helper methods for handling Light sensors.

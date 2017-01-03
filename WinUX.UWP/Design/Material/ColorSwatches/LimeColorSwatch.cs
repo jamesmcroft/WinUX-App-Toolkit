@@ -2,8 +2,6 @@
 {
     using Windows.UI;
 
-    using WinUX.Extensions;
-
     internal sealed class LimeColorSwatch : IMaterialColorSwatch
     {
         public Color Color50 => "#f9fbe7".ToColor();

@@ -2,8 +2,6 @@
 {
     using Windows.UI;
 
-    using WinUX.Extensions;
-
     /// <summary>
     /// Defines the cyan material design color swatch.
     /// </summary>

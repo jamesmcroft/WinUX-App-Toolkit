@@ -2,6 +2,8 @@
 {
     using Windows.UI.Xaml;
 
+    using WinUX.Networking;
+
     /// <summary>
     /// Defines the properties for the <see cref="NetworkConnectionTrigger"/>.
     /// </summary>

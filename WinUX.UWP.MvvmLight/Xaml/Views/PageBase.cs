@@ -10,7 +10,6 @@
 
     using WinUX.Device.Profile;
     using WinUX.Diagnostics.Tracing;
-    using WinUX.Extensions;
     using WinUX.Xaml;
 
     /// <summary>

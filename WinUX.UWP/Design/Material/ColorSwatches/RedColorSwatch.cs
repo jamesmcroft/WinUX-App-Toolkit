@@ -2,8 +2,6 @@
 {
     using Windows.UI;
 
-    using WinUX.Extensions;
-
     internal sealed class RedColorSwatch : IMaterialColorSwatch
     {
         public Color Color50 => "#ffebee".ToColor();

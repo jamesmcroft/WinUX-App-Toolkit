@@ -3,6 +3,8 @@
     using Windows.System.Profile;
     using Windows.UI.Xaml;
 
+    using WinUX.Device.Profile;
+
     /// <summary>
     /// Defines a visual state trigger for the current device type.
     /// </summary>
@@ -27,7 +29,7 @@
                     break;
                 case DeviceType.Mobile:
                     trigger.IsActive = IsInContinuum() && trigger.SupportsContinuum
-                                           ? newVal == DeviceType.ContinuumPhone
+                                           ? newVal == DeviceType.MobileContinuum
                                            : newVal == DeviceType.Mobile;
                     break;
                 case DeviceType.SurfaceHub:
@@ -39,8 +41,8 @@
                 case DeviceType.Xbox:
                     trigger.IsActive = newVal == DeviceType.Xbox;
                     break;
-                case DeviceType.HoloLens:
-                    trigger.IsActive = newVal == DeviceType.HoloLens;
+                case DeviceType.Holographic:
+                    trigger.IsActive = newVal == DeviceType.Holographic;
                     break;
                 default:
                     trigger.IsActive = newVal == DeviceType.Unknown;
@@ -50,12 +52,7 @@
 
         private static bool IsInContinuum()
         {
-            if (CurrentDevice != DeviceType.Mobile)
-            {
-                return false;
-            }
-
-            return DeviceTrigger.ScreenDiagonal > 7;
+            return CurrentDevice == DeviceType.Mobile && DeviceTrigger.ScreenDiagonal > 7;
         }
     }
 }

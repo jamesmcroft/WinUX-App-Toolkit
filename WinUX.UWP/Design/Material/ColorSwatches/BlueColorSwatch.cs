@@ -2,8 +2,6 @@
 {
     using Windows.UI;
 
-    using WinUX.Extensions;
-
     /// <summary>
     /// Defines the blue material design color swatch.
     /// </summary>

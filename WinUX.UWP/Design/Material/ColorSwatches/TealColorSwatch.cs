@@ -2,8 +2,6 @@
 {
     using Windows.UI;
 
-    using WinUX.Extensions;
-
     internal sealed class TealColorSwatch : IMaterialColorSwatch
     {
         public Color Color50 => "#e0f2f1".ToColor();

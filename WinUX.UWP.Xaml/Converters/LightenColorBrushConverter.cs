@@ -7,7 +7,6 @@
     using Windows.UI.Xaml.Media;
 
     using WinUX.Common;
-    using WinUX.Extensions;
 
     /// <summary>
     /// Defines a value converter for lightening a <see cref="SolidColorBrush"/>.

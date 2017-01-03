@@ -2,8 +2,6 @@
 {
     using Windows.UI;
 
-    using WinUX.Extensions;
-
     internal sealed class DeepPurpleColorSwatch : IMaterialColorSwatch
     {
         public Color Color50 => "#ede7f6".ToColor();

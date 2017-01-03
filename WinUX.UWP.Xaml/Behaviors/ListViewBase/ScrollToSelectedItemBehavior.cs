@@ -7,6 +7,8 @@
 
     using Microsoft.Xaml.Interactivity;
 
+    using WinUX.Controls.ListViewBase;
+
     /// <summary>
     /// Defines a behavior for scrolling to an area of a ListViewBase control when triggered.
     /// </summary>
@@ -98,13 +100,13 @@
 
                 switch (this.ScrollToMode)
                 {
-                    case this.ScrollToMode.First:
+                    case ScrollToMode.First:
                         item = this.ListViewBase.Items.FirstOrDefault();
                         break;
-                    case this.ScrollToMode.Last:
+                    case ScrollToMode.Last:
                         item = this.ListViewBase.Items.LastOrDefault();
                         break;
-                    case this.ScrollToMode.Item:
+                    case ScrollToMode.Item:
                         item = this.Item;
                         break;
                 }

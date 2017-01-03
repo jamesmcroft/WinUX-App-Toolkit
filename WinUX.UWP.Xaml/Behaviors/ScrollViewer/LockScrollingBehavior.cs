@@ -5,6 +5,8 @@
 
     using Microsoft.Xaml.Interactivity;
 
+    using WinUX.Controls.ScrollViewer;
+
     /// <summary>
     /// Defines a behavior for locking the scrolling of a ScrollViewer control when triggered.
     /// </summary>
