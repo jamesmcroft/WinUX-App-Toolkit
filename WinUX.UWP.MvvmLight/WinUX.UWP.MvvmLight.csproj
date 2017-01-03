@@ -111,7 +111,10 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\ViewModels\CoreViewModelBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Xaml\Views\PageBase.cs" />
+    <Compile Include="Xaml\Views\PageBaseViewModel.cs" />
     <EmbeddedResource Include="Properties\WinUX.UWP.MvvmLight.rd.xml" />
   </ItemGroup>
   <ItemGroup>
