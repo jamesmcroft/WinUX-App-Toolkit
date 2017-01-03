@@ -5,13 +5,14 @@
     using System.Linq;
     using System.Threading.Tasks;
 
+    using Windows.ApplicationModel;
     using Windows.Storage;
     using Windows.Storage.Streams;
 
     /// <summary>
     /// Defines helper methods for handling storage of files.
     /// </summary>
-    public sealed class StorageHelper
+    public class StorageHelper
     {
         private static StorageHelper current;
 
@@ -19,6 +20,70 @@
         /// Gets a static instance of the <see cref="StorageHelper"/>.
         /// </summary>
         public static StorageHelper Current => current ?? (current = new StorageHelper());
+
+        /// <summary>
+        /// Gets a file as a stream that is packaged as part of the application's installation folder with read access.
+        /// </summary>
+        /// <param name="filePath">
+        /// The path to the file.
+        /// </param>
+        /// <returns>
+        /// Returns the file stream.
+        /// </returns>
+        public static Task<IRandomAccessStream> GetPackagedFileAsStreamAsync(string filePath)
+        {
+            return GetPackagedFileAsStreamAsync(filePath, FileAccessMode.Read);
+        }
+
+        /// <summary>
+        /// Gets a file as a stream that is packaged as part of the application's installation folder.
+        /// </summary>
+        /// <param name="filePath">
+        /// The path to the file.
+        /// </param>
+        /// <param name="accessMode">
+        /// The mode of accessing the file.
+        /// </param>
+        /// <returns>
+        /// Returns the file stream.
+        /// </returns>
+        public static async Task<IRandomAccessStream> GetPackagedFileAsStreamAsync(
+            string filePath,
+            FileAccessMode accessMode)
+        {
+            var rootFolder = Package.Current.InstalledLocation;
+
+            return await GetFileAsStreamAsync(filePath, accessMode, rootFolder);
+        }
+
+        /// <summary>
+        /// Gets a file as a stream from a specified file path and root folder.
+        /// </summary>
+        /// <param name="filePath">
+        /// The path to the file.
+        /// </param>
+        /// <param name="accessMode">
+        /// The mode of accessing the file.
+        /// </param>
+        /// <param name="fileFolder">
+        /// The root file folder.
+        /// </param>
+        /// <returns>
+        /// Returns the file stream.
+        /// </returns>
+        public static async Task<IRandomAccessStream> GetFileAsStreamAsync(
+            string filePath,
+            FileAccessMode accessMode,
+            StorageFolder fileFolder)
+        {
+            var fileName = Path.GetFileName(filePath);
+            fileFolder = await GetSubFolder(filePath, fileFolder);
+
+            var file = await fileFolder.GetFileAsync(fileName);
+
+            return await file.OpenAsync(accessMode);
+        }
+
 
         /// <summary>
         /// Saves a byte array to a <see cref="StorageFile"/> in the Temp storage folder of the application with a given file extension.
@@ -282,6 +347,15 @@
             var files = await folder.GetFilesAsync();
             var file = files.FirstOrDefault(x => x.Name == fileName);
             return file;
+        }
+
+        private static async Task<StorageFolder> GetSubFolder(string filePath, StorageFolder fileFolder)
+        {
+            var folderName = Path.GetDirectoryName(filePath);
+
+            return !string.IsNullOrEmpty(folderName) && folderName != @"\"
+                       ? await fileFolder.GetFolderAsync(folderName)
+                       : fileFolder;
         }
     }
 }

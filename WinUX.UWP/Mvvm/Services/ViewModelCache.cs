@@ -7,7 +7,7 @@
     /// <summary>
     /// Defines a provider for caching view-models.
     /// </summary>
-    public sealed class ViewModelCache
+    public class ViewModelCache : IViewModelCache
     {
         private static ViewModelCache current;
 
@@ -26,16 +26,8 @@
 
         private Dictionary<Guid, object> Cache { get; }
 
-        /// <summary>
-        /// Adds a <see cref="object"/> containing the view model for the given <paramref name="identifier"/>.
-        /// </summary>
-        /// <param name="identifier">
-        /// The navigation arguments corresponding to the view model.
-        /// </param>
-        /// <param name="viewModel">
-        /// The view model.
-        /// </param>
-        public void AddViewModel(Guid identifier, object viewModel)
+        /// <inheritdoc />
+        public void Add(Guid identifier, object viewModel)
         {
             var cacheData = this.GetCacheData(identifier);
             if (cacheData.Value != null) return;
@@ -43,39 +35,25 @@
             this.Cache.Add(identifier, viewModel);
         }
 
-        /// <summary>
-        /// Gets a <see cref="object"/> containing the view model for the given navigation args.
-        /// </summary>
-        /// <typeparam name="T">
-        /// The type of view model to retrieve.
-        /// </typeparam>
-        /// <param name="identifer">
-        /// The navigation arguments to find a view model for.
-        /// </param>
-        /// <returns>
-        /// Returns an <see cref="object"/> as a view model.
-        /// </returns>
-        public T GetViewModel<T>(Guid identifer) where T : class
+        /// <inheritdoc />
+        public TViewModel Get<TViewModel>(Guid identifier) where TViewModel : class
         {
-            var cache = this.GetCacheData(identifer);
-            return cache.Value as T;
+            var cache = this.GetCacheData(identifier);
+            return cache.Value as TViewModel;
         }
 
-        /// <summary>
-        /// Removes an existing view model from the cache.
-        /// </summary>
-        /// <param name="identifier">
-        /// The identifier of the view-model to remove.
-        /// </param>
-        public void RemoveIfExists(Guid identifier)
+        /// <inheritdoc />
+        public void Remove(Guid identifier)
         {
-            if (identifier != Guid.Empty)
+            if (identifier == Guid.Empty)
             {
-                var cacheData = this.GetCacheData(identifier);
-                if (cacheData.Value != null)
-                {
-                    this.Cache.Remove(cacheData.Key);
-                }
+                return;
+            }
+
+            var cacheData = this.GetCacheData(identifier);
+            if (cacheData.Value != null)
+            {
+                this.Cache.Remove(cacheData.Key);
             }
         }
 

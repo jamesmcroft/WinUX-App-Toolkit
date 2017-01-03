@@ -198,6 +198,7 @@
     <Compile Include="Mvvm\Input\DelegateCommand.cs" />
     <Compile Include="Mvvm\Input\DelegateCommand{T}.cs" />
     <Compile Include="Mvvm\Services\INavigationService.cs" />
+    <Compile Include="Mvvm\Services\IViewModelCache.cs" />
     <Compile Include="Mvvm\Services\NavigationService.cs" />
     <Compile Include="Mvvm\Services\ViewModelCache.cs" />
     <Compile Include="Networking\INetworkStatusManager.cs" />
@@ -217,13 +218,9 @@
     <Compile Include="Security\Data\DataEncryptException.cs" />
     <Compile Include="Security\Data\DataEncryptionService.cs" />
     <Compile Include="Security\Data\IDataEncryptionService.cs" />
-    <Compile Include="Services\Jobs\Job.cs" />
-    <Compile Include="Services\Jobs\JobManager.cs" />
-    <Compile Include="Services\Jobs\JobReferenceLostException.cs" />
     <Compile Include="Storage\StorageFileProperty.cs" />
     <Compile Include="Storage\StorageFolders.cs" />
     <Compile Include="Storage\StorageHelper.cs" />
-    <Compile Include="Storage\Streams\StorageStreamHelper.cs" />
     <Compile Include="Xaml\AdaptiveState.cs" />
     <Compile Include="Xaml\DependencyPropertyListener.cs" />
     <Compile Include="Xaml\UIDispatcher.cs" />

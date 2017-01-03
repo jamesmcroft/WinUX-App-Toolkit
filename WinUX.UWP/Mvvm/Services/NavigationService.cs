@@ -46,7 +46,7 @@
             if (frame == null) throw new ArgumentNullException(nameof(frame));
 
             this.Frame = frame;
-            this.Frame.Navigated += this.Frame_OnNavigated;
+            this.Frame.Navigated += this.OnFrameNavigated;
             this.Frame.NavigationFailed += Frame_OnNavigationFailed;
 
             if (ApiInformation.IsTypePresent("Windows.UI.Core.SystemNavigationManager"))
@@ -304,7 +304,7 @@
             this.UpdateBackButtonVisibility();
         }
 
-        private void Frame_OnNavigated(object sender, NavigationEventArgs args)
+        private void OnFrameNavigated(object sender, NavigationEventArgs args)
         {
             this.CurrentPageNavigationParameter = args.Parameter;
 

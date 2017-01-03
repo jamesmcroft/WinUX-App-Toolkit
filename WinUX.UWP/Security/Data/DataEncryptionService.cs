@@ -64,9 +64,8 @@
                            {
                                try
                                {
-                                   var aes = SymmetricKeyAlgorithmProvider.OpenAlgorithm(this.encryptionAlgorithm);
-                                   var key = this.keyHash;
-                                   var cryptoKey = aes.CreateSymmetricKey(key);
+                                   var algorithm = SymmetricKeyAlgorithmProvider.OpenAlgorithm(this.encryptionAlgorithm);
+                                   var cryptoKey = algorithm.CreateSymmetricKey(this.keyHash);
                                    var decrypted = CryptographicEngine.Decrypt(cryptoKey, data, null);
                                    return decrypted;
                                }

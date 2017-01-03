@@ -16,17 +16,10 @@
     /// </summary>
     public abstract class BindableBase : DependencyObject, IBindable
     {
-        /// <summary>
-        /// The property changed event.
-        /// </summary>
+        /// <inheritdoc />
         public event PropertyChangedEventHandler PropertyChanged;
 
-        /// <summary>
-        /// Called to notify that a property has changed.
-        /// </summary>
-        /// <param name="propertyName">
-        /// The property name.
-        /// </param>
+        /// <inheritdoc />
         public virtual void RaisePropertyChanged([CallerMemberName] string propertyName = null)
         {
             if (DesignMode.DesignModeEnabled) return;
