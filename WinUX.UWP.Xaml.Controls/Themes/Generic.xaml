@@ -1,0 +1,16 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="ms-appx:///WinUX.UWP.Xaml.Controls/DraggableContentControl/DraggableContentControl.xaml" />
+        <ResourceDictionary Source="ms-appx:///WinUX.UWP.Xaml.Controls/DrawingCanvas/DrawingCanvas.xaml" />
+        <ResourceDictionary Source="ms-appx:///WinUX.UWP.Xaml.Controls/Expander/Expander.xaml" />
+        <ResourceDictionary Source="ms-appx:///WinUX.UWP.Xaml.Controls/HeaderedTextBlock/HeaderedTextBlock.xaml" />
+        <ResourceDictionary Source="ms-appx:///WinUX.UWP.Xaml.Controls/RangeSlider/RangeSlider.xaml" />
+        <ResourceDictionary Source="ms-appx:///WinUX.UWP.Xaml.Controls/Stepper/Stepper.xaml" />
+        <ResourceDictionary Source="ms-appx:///WinUX.UWP.Xaml.Controls/ValidatingComboBox/ValidatingComboBox.xaml" />
+        <ResourceDictionary Source="ms-appx:///WinUX.UWP.Xaml.Controls/ValidatingTextBox/ValidatingTextBox.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

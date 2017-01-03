@@ -1,0 +1,18 @@
+﻿<Application
+    x:Class="WinUX.UWP.Samples.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:samples="using:WinUX.UWP.Samples"
+    RequestedTheme="Light">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ms-appx:///WinUX.UWP.Xaml/Themes/Generic.xaml" />
+                <ResourceDictionary Source="AppResources.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <samples:Locator x:Key="Locator" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

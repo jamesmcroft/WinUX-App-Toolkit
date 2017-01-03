@@ -1,0 +1,20 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:WinUX.Xaml.Controls">
+
+    <Style TargetType="controls:DrawingCanvas">
+        <Setter Property="Background" Value="White" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="controls:DrawingCanvas">
+                    <Grid x:Name="Panel">
+                        <Grid x:Name="RenderBackground" Background="{TemplateBinding Background}" />
+                        <InkCanvas x:Name="DrawingArea" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

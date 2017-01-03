@@ -13,37 +13,37 @@
     /// <summary>
     /// Defines a provider for handling the <see cref="MessageDialog"/>.
     /// </summary>
-    public class MessageDialogHelper : IDisposable
+    public class MessageDialogManager : IDisposable
     {
-        private static MessageDialogHelper current;
+        private static MessageDialogManager current;
 
         private readonly CoreDispatcher dispatcher;
 
         private SemaphoreSlim semaphore = new SemaphoreSlim(1);
         
         /// <summary>
-        /// Initializes a new instance of the <see cref="MessageDialogHelper"/> class.
+        /// Initializes a new instance of the <see cref="MessageDialogManager"/> class.
         /// </summary>
         /// <param name="dispatcher">
         /// The core dispatcher used for running message dialog logic.
         /// </param>
-        public MessageDialogHelper(CoreDispatcher dispatcher)
+        public MessageDialogManager(CoreDispatcher dispatcher)
         {
             if (dispatcher == null)
             {
                 throw new ArgumentNullException(
                           nameof(dispatcher),
-                          "If you're using MessageDialogHelper.Current, remember to initialize the UIDispatcher from the OnLaunched event in your App.xaml.cs.");
+                          "If you're using MessageDialogManager.Current, remember to initialize the UIDispatcher from the OnLaunched event in your App.xaml.cs.");
             }
 
             this.dispatcher = dispatcher;
         }
 
         /// <summary>
-        /// Gets an instance of the <see cref="MessageDialogHelper"/>.
+        /// Gets an instance of the <see cref="MessageDialogManager"/>.
         /// </summary>
-        public static MessageDialogHelper Current
-            => current ?? (current = new MessageDialogHelper(UIDispatcher.Instance));
+        public static MessageDialogManager Current
+            => current ?? (current = new MessageDialogManager(UIDispatcher.Instance));
 
         /// <summary>
         /// Shows the message dialog with a given message.

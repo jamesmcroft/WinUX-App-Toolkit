@@ -1,0 +1,99 @@
+[
+  {
+    "Name": "Controls",
+    "IconSymbol": 57642,
+    "SourcePageType": "WinUX.UWP.Samples.Samples.Controls.ControlsPage, WinUX.UWP.Samples",
+    "Samples": [
+      {
+        "Name": "AppMenu",
+        "Description": "The AppMenu control is designed to provide a core navigation function to any UWP application that wishes to used the 'Hamburger' menu style.",
+        "SourcePageType": "WinUX.UWP.Samples.Samples.Controls.AppMenu.AppMenuSamplePage, WinUX.UWP.Samples",
+        "BindingFileSource": "AppMenuSamplePage.code",
+        "GroupName": "Controls"
+      },
+      {
+        "Name": "DraggableContentControl",
+        "Description": "The DraggableContentControl control is designed to allow content to be moved around the screen.",
+        "SourcePageType": "WinUX.UWP.Samples.Samples.Controls.DraggableContentControl.DraggableContentControlSamplePage, WinUX.UWP.Samples",
+        "BindingFileSource": "DraggableContentControlSamplePage.code",
+        "GroupName": "Controls"
+      },
+      {
+        "Name": "DrawingCanvas",
+        "Description": "The DrawingCanvas control is designed to make it easier to capture drawings from the InkCanvas to a StorageFile.",
+        "SourcePageType": "WinUX.UWP.Samples.Samples.Controls.DrawingCanvas.DrawingCanvasSamplePage, WinUX.UWP.Samples",
+        "BindingFileSource": "DrawingCanvasSamplePage.code",
+        "GroupName": "Controls"
+      },
+      {
+        "Name": "Expander",
+        "Description": "The Expander control is designed to provide a a way of collapsing and expanding content.",
+        "SourcePageType": "WinUX.UWP.Samples.Samples.Controls.Expander.ExpanderSamplePage, WinUX.UWP.Samples",
+        "BindingFileSource": "ExpanderSamplePage.code",
+        "GroupName": "Controls"
+      },
+      {
+        "Name": "HeaderedTextBlock",
+        "Description": "The HeaderedTextBlock control is designed to provide a header for read-only text. This control is useful for displaying read-only forms.",
+        "SourcePageType": "WinUX.UWP.Samples.Samples.Controls.HeaderedTextBlock.HeaderedTextBlockSamplePage, WinUX.UWP.Samples",
+        "BindingFileSource": "HeaderedTextBlockSamplePage.code",
+        "GroupName": "Controls"
+      },
+      {
+        "Name": "Stepper",
+        "Description": "The Stepper control provides a user interface for incrementing or decrementing a value.",
+        "SourcePageType": "WinUX.UWP.Samples.Samples.Controls.Stepper.StepperSamplePage, WinUX.UWP.Samples",
+        "BindingFileSource": "StepperSamplePage.code",
+        "GroupName": "Controls"
+      },
+      {
+        "Name": "ValidatingComboBox",
+        "Description": "The ValidatingComboBox control is designed to provide validation for a drop down value when used in a form, for example, a login page.",
+        "SourcePageType": "WinUX.UWP.Samples.Samples.Controls.ValidatingComboBox.ValidatingComboBoxSamplePage, WinUX.UWP.Samples",
+        "BindingFileSource": "ValidatingComboBoxSamplePage.code",
+        "GroupName": "Controls"
+      },
+      {
+        "Name": "ValidatingTextBox",
+        "Description": "The ValidatingTextBox control is designed to provide validation to text when used in a form, for example, a login page.",
+        "SourcePageType": "WinUX.UWP.Samples.Samples.Controls.ValidatingTextBox.ValidatingTextBoxSamplePage, WinUX.UWP.Samples",
+        "BindingFileSource": "ValidatingTextBoxSamplePage.code",
+        "GroupName": "Controls"
+      }
+    ]
+  },
+  {
+    "Name": "Design",
+    "IconSymbol": 57747,
+    "SourcePageType": "WinUX.UWP.Samples.Samples.Design.DesignPage, WinUX.UWP.Samples",
+    "Samples": [
+      {
+        "Name": "Color swatches",
+        "Description": "This is a set of color swatches which can be used in apps inspired by Google's Material design pattern.",
+        "SourcePageType": "WinUX.UWP.Samples.Samples.Design.MaterialDesignSwatches.MaterialDesignSwatchesSamplePage, WinUX.UWP.Samples",
+        "GroupName": "Design"
+      }
+    ]
+  },
+  {
+    "Name": "Helpers",
+    "IconSymbol": 57627,
+    "SourcePageType": "WinUX.UWP.Samples.Samples.Helpers.HelpersPage, WinUX.UWP.Samples",
+    "Samples": [
+      {
+        "Name": "AppDiagnostics",
+        "Description": "The AppDiagnostics helper is designed to make it easier to log information, errors and warnings as well as catch unhandled exceptions all written out to a log file in the local state of the application.",
+        "SourcePageType": "WinUX.UWP.Samples.Samples.Helpers.AppDiagnostics.AppDiagnosticsSamplePage, WinUX.UWP.Samples",
+        "BindingFileSource": "AppDiagnosticsSamplePage.code",
+        "GroupName": "Helpers"
+      },
+      {
+        "Name": "WindowHelper",
+        "Description": "The WindowHelpers are designed to make it easier to launch additional application windows as part of your main application.",
+        "SourcePageType": "WinUX.UWP.Samples.Samples.Helpers.WindowHelper.WindowHelperSamplePage, WinUX.UWP.Samples",
+        "BindingFileSource": "WindowHelperSamplePage.code",
+        "GroupName": "Helpers"
+      }
+    ]
+  }
+]

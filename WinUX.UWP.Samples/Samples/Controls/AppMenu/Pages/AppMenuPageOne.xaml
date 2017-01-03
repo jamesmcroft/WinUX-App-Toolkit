@@ -1,0 +1,12 @@
+﻿<Page
+    x:Class="WinUX.UWP.Samples.Samples.Controls.AppMenu.Pages.AppMenuPageOne"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource GreyBrush100}">
+        <TextBlock Text="This is AppMenuPageOne!" Foreground="{StaticResource BlueBrush500}" Style="{StaticResource SubheaderTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+    </Grid>
+</Page>

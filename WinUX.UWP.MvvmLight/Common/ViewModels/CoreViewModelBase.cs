@@ -105,10 +105,10 @@
                 : Mvvm.Services.NavigationService.Current;
 
         /// <summary>
-        /// Gets the <see cref="MessageDialogHelper"/> for the view that created this view model.
+        /// Gets the <see cref="MessageDialogManager"/> for the view that created this view model.
         /// </summary>
-        public MessageDialogHelper Dialog
-            => this.IsSecondaryView ? ViewMessageDialogManager.Current.Get(this.ViewId) : MessageDialogHelper.Current;
+        public MessageDialogManager Dialog
+            => this.IsSecondaryView ? ViewMessageDialogManager.Current.Get(this.ViewId) : MessageDialogManager.Current;
 
         /// <inheritdoc />
         public override void RaisePropertyChanged(string propertyName = null)
@@ -178,7 +178,7 @@
                     {
                         ViewMessageDialogManager.Current.RegisterOrUpdate(
                             this.ViewId,
-                            new MessageDialogHelper(viewDispatcher));
+                            new MessageDialogManager(viewDispatcher));
                     }
                 }
             }

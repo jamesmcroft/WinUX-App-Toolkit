@@ -120,7 +120,7 @@
     <Compile Include="ApplicationModel\Lifecycle\IAppLifecycleManager.cs" />
     <Compile Include="ApplicationModel\Lifecycle\ISuspendable.cs" />
     <Compile Include="ApplicationModel\Lifecycle\AppLifecycleManager.cs" />
-    <Compile Include="ApplicationModel\Resources\ResourceHelper.cs" />
+    <Compile Include="ApplicationModel\Resources\ResourceHandler.cs" />
     <Compile Include="Application\AppPackageFamilyNames.cs" />
     <Compile Include="Application\AppLauncher.cs" />
     <Compile Include="Application\ViewManagement\ViewCoreDispatcherManager.cs" />
@@ -128,7 +128,7 @@
     <Compile Include="Application\ViewManagement\ViewNavigationServiceManager.cs" />
     <Compile Include="Application\ViewManagement\ViewServiceChanged.cs" />
     <Compile Include="Application\ViewManagement\ViewServiceManager.cs" />
-    <Compile Include="Application\ViewManagement\WindowHelper.cs" />
+    <Compile Include="Application\ViewManagement\WindowManager.cs" />
     <Compile Include="Collections\ObjectModel\LocalIncrementalLoadingCollection.cs" />
     <Compile Include="Collections\ObjectModel\ObservableDictionary.cs" />
     <Compile Include="Collections\ObjectModel\ObservableDictionaryChanged.cs" />
@@ -193,7 +193,7 @@
     <Compile Include="Input\Pointer\PenEventType.cs" />
     <Compile Include="Input\Speech\SpeechCommand.cs" />
     <Compile Include="Maths\OrientedSize.cs" />
-    <Compile Include="Messaging\Dialogs\MessageDialogHelper.cs" />
+    <Compile Include="Messaging\Dialogs\MessageDialogManager.cs" />
     <Compile Include="Mvvm\BindableBase.cs" />
     <Compile Include="Mvvm\Input\DelegateCommand.cs" />
     <Compile Include="Mvvm\Input\DelegateCommand{T}.cs" />

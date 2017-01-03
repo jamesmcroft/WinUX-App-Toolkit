@@ -9,7 +9,7 @@
     /// <summary>
     /// Defines helper methods for handling application resources in code.
     /// </summary>
-    public static class ResourceHelper
+    public static class ResourceHandler
     {
         /// <summary>
         /// Gets a string resource from the assembly calling this method within the specified resource area by the specified resource name.

@@ -1,0 +1,1264 @@
+﻿<components:SamplePage
+    x:Class="WinUX.UWP.Samples.Samples.Design.MaterialDesignSwatches.MaterialDesignSwatchesSamplePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:components="using:WinUX.UWP.Samples.Components"
+    xmlns:controls="using:WinUX.Xaml.Controls"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="AdaptiveVisualStateGroup">
+                <VisualState x:Name="VisualStateNarrow">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="Content.(RelativePanel.AlignRightWithPanel)" Value="True" />
+                        <Setter Target="Content.(RelativePanel.Above)" Value="Properties" />
+
+                        <Setter Target="Properties.Height" Value="300" />
+                        <Setter Target="Properties.(RelativePanel.AlignLeftWithPanel)" Value="True" />
+
+                        <Setter Target="UniformWidthPanel.MaximumColumns" Value="1" />
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="VisualStateNormal">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="720" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="Content.(RelativePanel.LeftOf)" Value="Properties" />
+                        <Setter Target="Content.(RelativePanel.AlignBottomWithPanel)" Value="True" />
+
+                        <Setter Target="Properties.Width" Value="300" />
+                        <Setter Target="Properties.(RelativePanel.AlignTopWithPanel)" Value="True" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <RelativePanel>
+            <Grid x:Name="Content" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignLeftWithPanel="True">
+                <GridView Margin="10" HorizontalContentAlignment="Stretch" IsItemClickEnabled="False" SelectionMode="None">
+                    <GridView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <controls:UniformWidthPanel x:Name="UniformWidthPanel" MaximumColumns="3" />
+                        </ItemsPanelTemplate>
+                    </GridView.ItemsPanel>
+
+                    <Grid x:Name="Red" Width="476">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Grid Background="{StaticResource RedBrush500}">
+                            <TextBlock Text="Red" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="1" Background="{StaticResource RedBrush50}">
+                            <TextBlock Text="50" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="2" Background="{StaticResource RedBrush100}">
+                            <TextBlock Text="100" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="3" Background="{StaticResource RedBrush200}">
+                            <TextBlock Text="200" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="4" Background="{StaticResource RedBrush300}">
+                            <TextBlock Text="300" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="5" Background="{StaticResource RedBrush400}">
+                            <TextBlock Text="400" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="6" Background="{StaticResource RedBrush500}">
+                            <TextBlock Text="500" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="7" Background="{StaticResource RedBrush600}">
+                            <TextBlock Text="600" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="8" Background="{StaticResource RedBrush700}">
+                            <TextBlock Text="700" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="9" Background="{StaticResource RedBrush800}">
+                            <TextBlock Text="800" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="10" Background="{StaticResource RedBrush900}">
+                            <TextBlock Text="900" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="11" Background="{StaticResource RedAccentBrush100}">
+                            <TextBlock Text="A100" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="12" Background="{StaticResource RedAccentBrush200}">
+                            <TextBlock Text="A200" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="13" Background="{StaticResource RedAccentBrush400}">
+                            <TextBlock Text="A400" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="14" Background="{StaticResource RedAccentBrush700}">
+                            <TextBlock Text="A700" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                    </Grid>
+
+                    <Grid x:Name="Pink" Width="476">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Grid Background="{StaticResource PinkBrush500}">
+                            <TextBlock Text="Pink" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="1" Background="{StaticResource PinkBrush50}">
+                            <TextBlock Text="50" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="2" Background="{StaticResource PinkBrush100}">
+                            <TextBlock Text="100" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="3" Background="{StaticResource PinkBrush200}">
+                            <TextBlock Text="200" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="4" Background="{StaticResource PinkBrush300}">
+                            <TextBlock Text="300" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="5" Background="{StaticResource PinkBrush400}">
+                            <TextBlock Text="400" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="6" Background="{StaticResource PinkBrush500}">
+                            <TextBlock Text="500" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="7" Background="{StaticResource PinkBrush600}">
+                            <TextBlock Text="600" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="8" Background="{StaticResource PinkBrush700}">
+                            <TextBlock Text="700" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="9" Background="{StaticResource PinkBrush800}">
+                            <TextBlock Text="800" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="10" Background="{StaticResource PinkBrush900}">
+                            <TextBlock Text="900" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="11" Background="{StaticResource PinkAccentBrush100}">
+                            <TextBlock Text="A100" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="12" Background="{StaticResource PinkAccentBrush200}">
+                            <TextBlock Text="A200" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="13" Background="{StaticResource PinkAccentBrush400}">
+                            <TextBlock Text="A400" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="14" Background="{StaticResource PinkAccentBrush700}">
+                            <TextBlock Text="A700" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                    </Grid>
+
+                    <Grid x:Name="Purple" Width="476">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Grid Background="{StaticResource PurpleBrush500}">
+                            <TextBlock Text="Purple" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="1" Background="{StaticResource PurpleBrush50}">
+                            <TextBlock Text="50" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="2" Background="{StaticResource PurpleBrush100}">
+                            <TextBlock Text="100" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="3" Background="{StaticResource PurpleBrush200}">
+                            <TextBlock Text="200" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="4" Background="{StaticResource PurpleBrush300}">
+                            <TextBlock Text="300" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="5" Background="{StaticResource PurpleBrush400}">
+                            <TextBlock Text="400" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="6" Background="{StaticResource PurpleBrush500}">
+                            <TextBlock Text="500" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="7" Background="{StaticResource PurpleBrush600}">
+                            <TextBlock Text="600" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="8" Background="{StaticResource PurpleBrush700}">
+                            <TextBlock Text="700" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="9" Background="{StaticResource PurpleBrush800}">
+                            <TextBlock Text="800" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="10" Background="{StaticResource PurpleBrush900}">
+                            <TextBlock Text="900" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="11" Background="{StaticResource PurpleAccentBrush100}">
+                            <TextBlock Text="A100" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="12" Background="{StaticResource PurpleAccentBrush200}">
+                            <TextBlock Text="A200" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="13" Background="{StaticResource PurpleAccentBrush400}">
+                            <TextBlock Text="A400" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="14" Background="{StaticResource PurpleAccentBrush700}">
+                            <TextBlock Text="A700" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                    </Grid>
+
+                    <Grid x:Name="DeepPurple" Width="476">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Grid Background="{StaticResource DeepPurpleBrush500}">
+                            <TextBlock Text="Deep Purple" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="1" Background="{StaticResource DeepPurpleBrush50}">
+                            <TextBlock Text="50" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="2" Background="{StaticResource DeepPurpleBrush100}">
+                            <TextBlock Text="100" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="3" Background="{StaticResource DeepPurpleBrush200}">
+                            <TextBlock Text="200" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="4" Background="{StaticResource DeepPurpleBrush300}">
+                            <TextBlock Text="300" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="5" Background="{StaticResource DeepPurpleBrush400}">
+                            <TextBlock Text="400" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="6" Background="{StaticResource DeepPurpleBrush500}">
+                            <TextBlock Text="500" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="7" Background="{StaticResource DeepPurpleBrush600}">
+                            <TextBlock Text="600" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="8" Background="{StaticResource DeepPurpleBrush700}">
+                            <TextBlock Text="700" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="9" Background="{StaticResource DeepPurpleBrush800}">
+                            <TextBlock Text="800" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="10" Background="{StaticResource DeepPurpleBrush900}">
+                            <TextBlock Text="900" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="11" Background="{StaticResource DeepPurpleAccentBrush100}">
+                            <TextBlock Text="A100" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="12" Background="{StaticResource DeepPurpleAccentBrush200}">
+                            <TextBlock Text="A200" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="13" Background="{StaticResource DeepPurpleAccentBrush400}">
+                            <TextBlock Text="A400" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="14" Background="{StaticResource DeepPurpleAccentBrush700}">
+                            <TextBlock Text="A700" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                    </Grid>
+
+                    <Grid x:Name="Indigo" Width="476">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Grid Background="{StaticResource IndigoBrush500}">
+                            <TextBlock Text="Indigo" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="1" Background="{StaticResource IndigoBrush50}">
+                            <TextBlock Text="50" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="2" Background="{StaticResource IndigoBrush100}">
+                            <TextBlock Text="100" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="3" Background="{StaticResource IndigoBrush200}">
+                            <TextBlock Text="200" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="4" Background="{StaticResource IndigoBrush300}">
+                            <TextBlock Text="300" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="5" Background="{StaticResource IndigoBrush400}">
+                            <TextBlock Text="400" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="6" Background="{StaticResource IndigoBrush500}">
+                            <TextBlock Text="500" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="7" Background="{StaticResource IndigoBrush600}">
+                            <TextBlock Text="600" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="8" Background="{StaticResource IndigoBrush700}">
+                            <TextBlock Text="700" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="9" Background="{StaticResource IndigoBrush800}">
+                            <TextBlock Text="800" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="10" Background="{StaticResource IndigoBrush900}">
+                            <TextBlock Text="900" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="11" Background="{StaticResource IndigoAccentBrush100}">
+                            <TextBlock Text="A100" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="12" Background="{StaticResource IndigoAccentBrush200}">
+                            <TextBlock Text="A200" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="13" Background="{StaticResource IndigoAccentBrush400}">
+                            <TextBlock Text="A400" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="14" Background="{StaticResource IndigoAccentBrush700}">
+                            <TextBlock Text="A700" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                    </Grid>
+
+                    <Grid x:Name="Blue" Width="476">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Grid Background="{StaticResource BlueBrush500}">
+                            <TextBlock Text="Blue" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="1" Background="{StaticResource BlueBrush50}">
+                            <TextBlock Text="50" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="2" Background="{StaticResource BlueBrush100}">
+                            <TextBlock Text="100" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="3" Background="{StaticResource BlueBrush200}">
+                            <TextBlock Text="200" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="4" Background="{StaticResource BlueBrush300}">
+                            <TextBlock Text="300" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="5" Background="{StaticResource BlueBrush400}">
+                            <TextBlock Text="400" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="6" Background="{StaticResource BlueBrush500}">
+                            <TextBlock Text="500" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="7" Background="{StaticResource BlueBrush600}">
+                            <TextBlock Text="600" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="8" Background="{StaticResource BlueBrush700}">
+                            <TextBlock Text="700" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="9" Background="{StaticResource BlueBrush800}">
+                            <TextBlock Text="800" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="10" Background="{StaticResource BlueBrush900}">
+                            <TextBlock Text="900" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="11" Background="{StaticResource BlueAccentBrush100}">
+                            <TextBlock Text="A100" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="12" Background="{StaticResource BlueAccentBrush200}">
+                            <TextBlock Text="A200" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="13" Background="{StaticResource BlueAccentBrush400}">
+                            <TextBlock Text="A400" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="14" Background="{StaticResource BlueAccentBrush700}">
+                            <TextBlock Text="A700" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                    </Grid>
+
+                    <Grid x:Name="LightBlue" Width="476">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Grid Background="{StaticResource LightBlueBrush500}">
+                            <TextBlock Text="Light Blue" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="1" Background="{StaticResource LightBlueBrush50}">
+                            <TextBlock Text="50" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="2" Background="{StaticResource LightBlueBrush100}">
+                            <TextBlock Text="100" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="3" Background="{StaticResource LightBlueBrush200}">
+                            <TextBlock Text="200" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="4" Background="{StaticResource LightBlueBrush300}">
+                            <TextBlock Text="300" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="5" Background="{StaticResource LightBlueBrush400}">
+                            <TextBlock Text="400" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="6" Background="{StaticResource LightBlueBrush500}">
+                            <TextBlock Text="500" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="7" Background="{StaticResource LightBlueBrush600}">
+                            <TextBlock Text="600" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="8" Background="{StaticResource LightBlueBrush700}">
+                            <TextBlock Text="700" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="9" Background="{StaticResource LightBlueBrush800}">
+                            <TextBlock Text="800" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="10" Background="{StaticResource LightBlueBrush900}">
+                            <TextBlock Text="900" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="11" Background="{StaticResource LightBlueAccentBrush100}">
+                            <TextBlock Text="A100" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="12" Background="{StaticResource LightBlueAccentBrush200}">
+                            <TextBlock Text="A200" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="13" Background="{StaticResource LightBlueAccentBrush400}">
+                            <TextBlock Text="A400" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="14" Background="{StaticResource LightBlueAccentBrush700}">
+                            <TextBlock Text="A700" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                    </Grid>
+
+                    <Grid x:Name="Cyan" Width="476">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Grid Background="{StaticResource CyanBrush500}">
+                            <TextBlock Text="Cyan" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="1" Background="{StaticResource CyanBrush50}">
+                            <TextBlock Text="50" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="2" Background="{StaticResource CyanBrush100}">
+                            <TextBlock Text="100" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="3" Background="{StaticResource CyanBrush200}">
+                            <TextBlock Text="200" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="4" Background="{StaticResource CyanBrush300}">
+                            <TextBlock Text="300" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="5" Background="{StaticResource CyanBrush400}">
+                            <TextBlock Text="400" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="6" Background="{StaticResource CyanBrush500}">
+                            <TextBlock Text="500" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="7" Background="{StaticResource CyanBrush600}">
+                            <TextBlock Text="600" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="8" Background="{StaticResource CyanBrush700}">
+                            <TextBlock Text="700" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="9" Background="{StaticResource CyanBrush800}">
+                            <TextBlock Text="800" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="10" Background="{StaticResource CyanBrush900}">
+                            <TextBlock Text="900" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="11" Background="{StaticResource CyanAccentBrush100}">
+                            <TextBlock Text="A100" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="12" Background="{StaticResource CyanAccentBrush200}">
+                            <TextBlock Text="A200" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="13" Background="{StaticResource CyanAccentBrush400}">
+                            <TextBlock Text="A400" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="14" Background="{StaticResource CyanAccentBrush700}">
+                            <TextBlock Text="A700" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                    </Grid>
+
+                    <Grid x:Name="Teal" Width="476">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Grid Background="{StaticResource TealBrush500}">
+                            <TextBlock Text="Teal" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="1" Background="{StaticResource TealBrush50}">
+                            <TextBlock Text="50" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="2" Background="{StaticResource TealBrush100}">
+                            <TextBlock Text="100" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="3" Background="{StaticResource TealBrush200}">
+                            <TextBlock Text="200" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="4" Background="{StaticResource TealBrush300}">
+                            <TextBlock Text="300" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="5" Background="{StaticResource TealBrush400}">
+                            <TextBlock Text="400" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="6" Background="{StaticResource TealBrush500}">
+                            <TextBlock Text="500" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="7" Background="{StaticResource TealBrush600}">
+                            <TextBlock Text="600" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="8" Background="{StaticResource TealBrush700}">
+                            <TextBlock Text="700" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="9" Background="{StaticResource TealBrush800}">
+                            <TextBlock Text="800" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="10" Background="{StaticResource TealBrush900}">
+                            <TextBlock Text="900" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="11" Background="{StaticResource TealAccentBrush100}">
+                            <TextBlock Text="A100" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="12" Background="{StaticResource TealAccentBrush200}">
+                            <TextBlock Text="A200" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="13" Background="{StaticResource TealAccentBrush400}">
+                            <TextBlock Text="A400" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="14" Background="{StaticResource TealAccentBrush700}">
+                            <TextBlock Text="A700" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                    </Grid>
+
+                    <Grid x:Name="Green" Width="476">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Grid Background="{StaticResource GreenBrush500}">
+                            <TextBlock Text="Green" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="1" Background="{StaticResource GreenBrush50}">
+                            <TextBlock Text="50" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="2" Background="{StaticResource GreenBrush100}">
+                            <TextBlock Text="100" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="3" Background="{StaticResource GreenBrush200}">
+                            <TextBlock Text="200" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="4" Background="{StaticResource GreenBrush300}">
+                            <TextBlock Text="300" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="5" Background="{StaticResource GreenBrush400}">
+                            <TextBlock Text="400" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="6" Background="{StaticResource GreenBrush500}">
+                            <TextBlock Text="500" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="7" Background="{StaticResource GreenBrush600}">
+                            <TextBlock Text="600" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="8" Background="{StaticResource GreenBrush700}">
+                            <TextBlock Text="700" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="9" Background="{StaticResource GreenBrush800}">
+                            <TextBlock Text="800" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="10" Background="{StaticResource GreenBrush900}">
+                            <TextBlock Text="900" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="11" Background="{StaticResource GreenAccentBrush100}">
+                            <TextBlock Text="A100" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="12" Background="{StaticResource GreenAccentBrush200}">
+                            <TextBlock Text="A200" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="13" Background="{StaticResource GreenAccentBrush400}">
+                            <TextBlock Text="A400" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="14" Background="{StaticResource GreenAccentBrush700}">
+                            <TextBlock Text="A700" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                    </Grid>
+
+                    <Grid x:Name="LightGreen" Width="476">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Grid Background="{StaticResource LightGreenBrush500}">
+                            <TextBlock Text="Light Green" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="1" Background="{StaticResource LightGreenBrush50}">
+                            <TextBlock Text="50" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="2" Background="{StaticResource LightGreenBrush100}">
+                            <TextBlock Text="100" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="3" Background="{StaticResource LightGreenBrush200}">
+                            <TextBlock Text="200" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="4" Background="{StaticResource LightGreenBrush300}">
+                            <TextBlock Text="300" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="5" Background="{StaticResource LightGreenBrush400}">
+                            <TextBlock Text="400" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="6" Background="{StaticResource LightGreenBrush500}">
+                            <TextBlock Text="500" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="7" Background="{StaticResource LightGreenBrush600}">
+                            <TextBlock Text="600" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="8" Background="{StaticResource LightGreenBrush700}">
+                            <TextBlock Text="700" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="9" Background="{StaticResource LightGreenBrush800}">
+                            <TextBlock Text="800" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="10" Background="{StaticResource LightGreenBrush900}">
+                            <TextBlock Text="900" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="11" Background="{StaticResource LightGreenAccentBrush100}">
+                            <TextBlock Text="A100" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="12" Background="{StaticResource LightGreenAccentBrush200}">
+                            <TextBlock Text="A200" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="13" Background="{StaticResource LightGreenAccentBrush400}">
+                            <TextBlock Text="A400" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="14" Background="{StaticResource LightGreenAccentBrush700}">
+                            <TextBlock Text="A700" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                    </Grid>
+
+                    <Grid x:Name="Lime" Width="476">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Grid Background="{StaticResource LimeBrush500}">
+                            <TextBlock Text="Lime" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="1" Background="{StaticResource LimeBrush50}">
+                            <TextBlock Text="50" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="2" Background="{StaticResource LimeBrush100}">
+                            <TextBlock Text="100" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="3" Background="{StaticResource LimeBrush200}">
+                            <TextBlock Text="200" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="4" Background="{StaticResource LimeBrush300}">
+                            <TextBlock Text="300" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="5" Background="{StaticResource LimeBrush400}">
+                            <TextBlock Text="400" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="6" Background="{StaticResource LimeBrush500}">
+                            <TextBlock Text="500" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="7" Background="{StaticResource LimeBrush600}">
+                            <TextBlock Text="600" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="8" Background="{StaticResource LimeBrush700}">
+                            <TextBlock Text="700" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="9" Background="{StaticResource LimeBrush800}">
+                            <TextBlock Text="800" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="10" Background="{StaticResource LimeBrush900}">
+                            <TextBlock Text="900" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="11" Background="{StaticResource LimeAccentBrush100}">
+                            <TextBlock Text="A100" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="12" Background="{StaticResource LimeAccentBrush200}">
+                            <TextBlock Text="A200" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="13" Background="{StaticResource LimeAccentBrush400}">
+                            <TextBlock Text="A400" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="14" Background="{StaticResource LimeAccentBrush700}">
+                            <TextBlock Text="A700" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                    </Grid>
+
+                    <Grid x:Name="Yellow" Width="476">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Grid Background="{StaticResource YellowBrush500}">
+                            <TextBlock Text="Yellow" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="1" Background="{StaticResource YellowBrush50}">
+                            <TextBlock Text="50" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="2" Background="{StaticResource YellowBrush100}">
+                            <TextBlock Text="100" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="3" Background="{StaticResource YellowBrush200}">
+                            <TextBlock Text="200" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="4" Background="{StaticResource YellowBrush300}">
+                            <TextBlock Text="300" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="5" Background="{StaticResource YellowBrush400}">
+                            <TextBlock Text="400" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="6" Background="{StaticResource YellowBrush500}">
+                            <TextBlock Text="500" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="7" Background="{StaticResource YellowBrush600}">
+                            <TextBlock Text="600" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="8" Background="{StaticResource YellowBrush700}">
+                            <TextBlock Text="700" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="9" Background="{StaticResource YellowBrush800}">
+                            <TextBlock Text="800" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="10" Background="{StaticResource YellowBrush900}">
+                            <TextBlock Text="900" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="11" Background="{StaticResource YellowAccentBrush100}">
+                            <TextBlock Text="A100" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="12" Background="{StaticResource YellowAccentBrush200}">
+                            <TextBlock Text="A200" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="13" Background="{StaticResource YellowAccentBrush400}">
+                            <TextBlock Text="A400" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="14" Background="{StaticResource YellowAccentBrush700}">
+                            <TextBlock Text="A700" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                    </Grid>
+
+                    <Grid x:Name="Amber" Width="476">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Grid Background="{StaticResource AmberBrush500}">
+                            <TextBlock Text="Amber" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="1" Background="{StaticResource AmberBrush50}">
+                            <TextBlock Text="50" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="2" Background="{StaticResource AmberBrush100}">
+                            <TextBlock Text="100" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="3" Background="{StaticResource AmberBrush200}">
+                            <TextBlock Text="200" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="4" Background="{StaticResource AmberBrush300}">
+                            <TextBlock Text="300" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="5" Background="{StaticResource AmberBrush400}">
+                            <TextBlock Text="400" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="6" Background="{StaticResource AmberBrush500}">
+                            <TextBlock Text="500" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="7" Background="{StaticResource AmberBrush600}">
+                            <TextBlock Text="600" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="8" Background="{StaticResource AmberBrush700}">
+                            <TextBlock Text="700" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="9" Background="{StaticResource AmberBrush800}">
+                            <TextBlock Text="800" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="10" Background="{StaticResource AmberBrush900}">
+                            <TextBlock Text="900" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="11" Background="{StaticResource AmberAccentBrush100}">
+                            <TextBlock Text="A100" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="12" Background="{StaticResource AmberAccentBrush200}">
+                            <TextBlock Text="A200" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="13" Background="{StaticResource AmberAccentBrush400}">
+                            <TextBlock Text="A400" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="14" Background="{StaticResource AmberAccentBrush700}">
+                            <TextBlock Text="A700" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                    </Grid>
+
+                    <Grid x:Name="Orange" Width="476">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Grid Background="{StaticResource OrangeBrush500}">
+                            <TextBlock Text="Orange" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="1" Background="{StaticResource OrangeBrush50}">
+                            <TextBlock Text="50" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="2" Background="{StaticResource OrangeBrush100}">
+                            <TextBlock Text="100" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="3" Background="{StaticResource OrangeBrush200}">
+                            <TextBlock Text="200" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="4" Background="{StaticResource OrangeBrush300}">
+                            <TextBlock Text="300" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="5" Background="{StaticResource OrangeBrush400}">
+                            <TextBlock Text="400" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="6" Background="{StaticResource OrangeBrush500}">
+                            <TextBlock Text="500" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="7" Background="{StaticResource OrangeBrush600}">
+                            <TextBlock Text="600" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="8" Background="{StaticResource OrangeBrush700}">
+                            <TextBlock Text="700" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="9" Background="{StaticResource OrangeBrush800}">
+                            <TextBlock Text="800" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="10" Background="{StaticResource OrangeBrush900}">
+                            <TextBlock Text="900" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="11" Background="{StaticResource OrangeAccentBrush100}">
+                            <TextBlock Text="A100" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="12" Background="{StaticResource OrangeAccentBrush200}">
+                            <TextBlock Text="A200" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="13" Background="{StaticResource OrangeAccentBrush400}">
+                            <TextBlock Text="A400" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="14" Background="{StaticResource OrangeAccentBrush700}">
+                            <TextBlock Text="A700" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                    </Grid>
+
+                    <Grid x:Name="DeepOrange" Width="476">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Grid Background="{StaticResource DeepOrangeBrush500}">
+                            <TextBlock Text="Deep Orange" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="1" Background="{StaticResource DeepOrangeBrush50}">
+                            <TextBlock Text="50" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="2" Background="{StaticResource DeepOrangeBrush100}">
+                            <TextBlock Text="100" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="3" Background="{StaticResource DeepOrangeBrush200}">
+                            <TextBlock Text="200" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="4" Background="{StaticResource DeepOrangeBrush300}">
+                            <TextBlock Text="300" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="5" Background="{StaticResource DeepOrangeBrush400}">
+                            <TextBlock Text="400" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="6" Background="{StaticResource DeepOrangeBrush500}">
+                            <TextBlock Text="500" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="7" Background="{StaticResource DeepOrangeBrush600}">
+                            <TextBlock Text="600" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="8" Background="{StaticResource DeepOrangeBrush700}">
+                            <TextBlock Text="700" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="9" Background="{StaticResource DeepOrangeBrush800}">
+                            <TextBlock Text="800" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="10" Background="{StaticResource DeepOrangeBrush900}">
+                            <TextBlock Text="900" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="11" Background="{StaticResource DeepOrangeAccentBrush100}">
+                            <TextBlock Text="A100" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="12" Background="{StaticResource DeepOrangeAccentBrush200}">
+                            <TextBlock Text="A200" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="13" Background="{StaticResource DeepOrangeAccentBrush400}">
+                            <TextBlock Text="A400" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="14" Background="{StaticResource DeepOrangeAccentBrush700}">
+                            <TextBlock Text="A700" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                    </Grid>
+
+                    <Grid x:Name="Brown" Width="476">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Grid Background="{StaticResource BrownBrush500}">
+                            <TextBlock Text="Brown" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="1" Background="{StaticResource BrownBrush50}">
+                            <TextBlock Text="50" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="2" Background="{StaticResource BrownBrush100}">
+                            <TextBlock Text="100" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="3" Background="{StaticResource BrownBrush200}">
+                            <TextBlock Text="200" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="4" Background="{StaticResource BrownBrush300}">
+                            <TextBlock Text="300" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="5" Background="{StaticResource BrownBrush400}">
+                            <TextBlock Text="400" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="6" Background="{StaticResource BrownBrush500}">
+                            <TextBlock Text="500" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="7" Background="{StaticResource BrownBrush600}">
+                            <TextBlock Text="600" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="8" Background="{StaticResource BrownBrush700}">
+                            <TextBlock Text="700" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="9" Background="{StaticResource BrownBrush800}">
+                            <TextBlock Text="800" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="10" Background="{StaticResource BrownBrush900}">
+                            <TextBlock Text="900" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                    </Grid>
+
+                    <Grid x:Name="Grey" Width="476">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Grid Background="{StaticResource GreyBrush500}">
+                            <TextBlock Text="Grey" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="1" Background="{StaticResource GreyBrush50}">
+                            <TextBlock Text="50" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="2" Background="{StaticResource GreyBrush100}">
+                            <TextBlock Text="100" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="3" Background="{StaticResource GreyBrush200}">
+                            <TextBlock Text="200" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="4" Background="{StaticResource GreyBrush300}">
+                            <TextBlock Text="300" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="5" Background="{StaticResource GreyBrush400}">
+                            <TextBlock Text="400" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="6" Background="{StaticResource GreyBrush500}">
+                            <TextBlock Text="500" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="7" Background="{StaticResource GreyBrush600}">
+                            <TextBlock Text="600" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="8" Background="{StaticResource GreyBrush700}">
+                            <TextBlock Text="700" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="9" Background="{StaticResource GreyBrush800}">
+                            <TextBlock Text="800" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="10" Background="{StaticResource GreyBrush900}">
+                            <TextBlock Text="900" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                    </Grid>
+
+                    <Grid x:Name="BlueGrey" Width="476">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Grid Background="{StaticResource BlueGreyBrush500}">
+                            <TextBlock Text="Blue Grey" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="1" Background="{StaticResource BlueGreyBrush50}">
+                            <TextBlock Text="50" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="2" Background="{StaticResource BlueGreyBrush100}">
+                            <TextBlock Text="100" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="3" Background="{StaticResource BlueGreyBrush200}">
+                            <TextBlock Text="200" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="4" Background="{StaticResource BlueGreyBrush300}">
+                            <TextBlock Text="300" Foreground="{StaticResource LightForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="5" Background="{StaticResource BlueGreyBrush400}">
+                            <TextBlock Text="400" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="6" Background="{StaticResource BlueGreyBrush500}">
+                            <TextBlock Text="500" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="7" Background="{StaticResource BlueGreyBrush600}">
+                            <TextBlock Text="600" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="8" Background="{StaticResource BlueGreyBrush700}">
+                            <TextBlock Text="700" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="9" Background="{StaticResource BlueGreyBrush800}">
+                            <TextBlock Text="800" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                        <Grid Grid.Row="10" Background="{StaticResource BlueGreyBrush900}">
+                            <TextBlock Text="900" Foreground="{StaticResource DarkForegroundBrush}" Margin="10" />
+                        </Grid>
+                    </Grid>
+                </GridView>
+            </Grid>
+
+            <components:PropertyPane x:Name="Properties" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" />
+        </RelativePanel>
+    </Grid>
+</components:SamplePage>

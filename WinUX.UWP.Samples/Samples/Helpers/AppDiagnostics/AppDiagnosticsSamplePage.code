@@ -1,0 +1,73 @@
+<components:SamplePage
+    x:Class="WinUX.UWP.Samples.Samples.Helpers.AppDiagnostics.AppDiagnosticsSamplePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:components="using:WinUX.UWP.Samples.Components"
+    mc:Ignorable="d">
+
+  <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <VisualStateManager.VisualStateGroups>
+      <VisualStateGroup x:Name="AdaptiveVisualStateGroup">
+        <VisualState x:Name="VisualStateNarrow">
+          <VisualState.StateTriggers>
+            <AdaptiveTrigger MinWindowWidth="0" />
+          </VisualState.StateTriggers>
+          <VisualState.Setters>
+            <Setter Target="Content.(RelativePanel.AlignRightWithPanel)" Value="True" />
+            <Setter Target="Content.(RelativePanel.Above)" Value="Properties" />
+
+            <Setter Target="Properties.Height" Value="300" />
+            <Setter Target="Properties.(RelativePanel.AlignLeftWithPanel)" Value="True" />
+          </VisualState.Setters>
+        </VisualState>
+
+        <VisualState x:Name="VisualStateNormal">
+          <VisualState.StateTriggers>
+            <AdaptiveTrigger MinWindowWidth="720" />
+          </VisualState.StateTriggers>
+          <VisualState.Setters>
+            <Setter Target="Content.(RelativePanel.LeftOf)" Value="Properties" />
+            <Setter Target="Content.(RelativePanel.AlignBottomWithPanel)" Value="True" />
+
+            <Setter Target="Properties.Width" Value="300" />
+            <Setter Target="Properties.(RelativePanel.AlignTopWithPanel)" Value="True" />
+          </VisualState.Setters>
+        </VisualState>
+      </VisualStateGroup>
+    </VisualStateManager.VisualStateGroups>
+
+    <RelativePanel>
+      <Grid x:Name="Content" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignLeftWithPanel="True">
+        <ScrollViewer x:Name="ScrollViewer">
+          <StackPanel>
+            <Border Style="{StaticResource SampleBorderStyle}">
+              <Button Content="Open app log" Click="OnOpenAppLogClicked" Style="{StaticResource SampleButtonStyle}" />
+            </Border>
+            <Border Style="{StaticResource SampleBorderStyle}">
+              <Button Content="Log Debug Event" Click="OnLogDebugClicked" Style="{StaticResource SampleButtonStyle}" />
+            </Border>
+            <Border Style="{StaticResource SampleBorderStyle}">
+              <Button Content="Log Info Event" Click="OnLogInfoClicked" Style="{StaticResource SampleButtonStyle}" />
+            </Border>
+            <Border Style="{StaticResource SampleBorderStyle}">
+              <Button Content="Log Warning Event" Click="OnLogWarningClicked" Style="{StaticResource SampleButtonStyle}" />
+            </Border>
+            <Border Style="{StaticResource SampleBorderStyle}">
+              <Button Content="Log Error Event" Click="OnLogErrorClicked" Style="{StaticResource SampleButtonStyle}" />
+            </Border>
+            <Border Style="{StaticResource SampleBorderStyle}">
+              <Button Content="Log Critical Event" Click="OnLogCriticalClicked" Style="{StaticResource SampleButtonStyle}" />
+            </Border>
+            <Border Style="{StaticResource SampleBorderStyle}">
+              <Button Content="Throw Uncaught Exception" Click="OnThrowExceptionClicked" Style="{StaticResource SampleButtonStyle}" />
+            </Border>
+          </StackPanel>
+        </ScrollViewer>
+      </Grid>
+
+      <components:PropertyPane x:Name="Properties" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" />
+    </RelativePanel>
+  </Grid>
+</components:SamplePage>

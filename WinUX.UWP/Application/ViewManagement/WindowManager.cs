@@ -17,7 +17,7 @@
     /// <summary>
     /// Defines helper methods for handling multiple windows of an application.
     /// </summary>
-    public static class WindowHelper
+    public static class WindowManager
     {
         /// <summary>
         /// Creates a new application <see cref="Window"/> with the specified page type and navigation parameter.
@@ -134,7 +134,7 @@
             try
             {
                 ViewCoreDispatcherManager.Current.RegisterOrUpdate(viewId, viewDispatcher);
-                ViewMessageDialogManager.Current.RegisterOrUpdate(viewId, new MessageDialogHelper(viewDispatcher));
+                ViewMessageDialogManager.Current.RegisterOrUpdate(viewId, new MessageDialogManager(viewDispatcher));
                 ViewNavigationServiceManager.Current.RegisterOrUpdate(viewId, new NavigationService(viewFrame));
             }
             catch (Exception ex)

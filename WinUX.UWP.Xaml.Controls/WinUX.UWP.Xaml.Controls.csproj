@@ -111,7 +111,42 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppMenu\AppMenu.Properties.cs" />
+    <Compile Include="AppMenu\AppMenu.Styling.cs" />
+    <Compile Include="AppMenu\AppMenu.xaml.cs">
+      <DependentUpon>AppMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AppMenu\AppMenuButton.cs" />
+    <Compile Include="AppMenu\AppMenuButton.Properties.cs" />
+    <Compile Include="AppMenu\AppMenuButtonType.cs" />
+    <Compile Include="AppMenu\FlyoutAppMenuButton.cs" />
+    <Compile Include="Common\IHeaderedValidatingControl.cs" />
+    <Compile Include="Common\IValidatingControl.cs" />
+    <Compile Include="Common\ValidationControlUpdated.cs" />
+    <Compile Include="DraggableContentControl\DraggableContentControl.cs" />
+    <Compile Include="DraggableContentControl\DraggableContentControl.Properties.cs" />
+    <Compile Include="DrawingCanvas\DrawingCanvas.cs" />
+    <Compile Include="DrawingCanvas\DrawingCanvas.Events.cs" />
+    <Compile Include="DrawingCanvas\DrawingCanvas.Properties.cs" />
+    <Compile Include="Expander\Expander.cs" />
+    <Compile Include="Expander\Expander.Properties.cs" />
+    <Compile Include="HeaderedTextBlock\HeaderedTextBlock.cs" />
+    <Compile Include="HeaderedTextBlock\HeaderedTextBlock.Properties.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RangeSlider\RangeSlider.cs" />
+    <Compile Include="RangeSlider\RangeSlider.Properties.cs" />
+    <Compile Include="RangeSlider\RangeSliderThumb.cs" />
+    <Compile Include="RangeSlider\RangeSliderValueChanged.cs" />
+    <Compile Include="Stepper\Stepper.cs" />
+    <Compile Include="Stepper\Stepper.Properties.cs" />
+    <Compile Include="UniformWidthPanel\UniformWidthPanel.cs" />
+    <Compile Include="UniformWidthPanel\UniformWidthPanel.Properties.cs" />
+    <Compile Include="ValidatingComboBox\ValidatingComboBox.cs" />
+    <Compile Include="ValidatingComboBox\ValidatingComboBox.Properties.cs" />
+    <Compile Include="ValidatingTextBox\ValidatingTextBox.cs" />
+    <Compile Include="ValidatingTextBox\ValidatingTextBox.Properties.cs" />
+    <Compile Include="WrapPanel\WrapPanel.cs" />
+    <Compile Include="WrapPanel\WrapPanel.Properties.cs" />
     <EmbeddedResource Include="Properties\WinUX.UWP.Xaml.Controls.rd.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -127,6 +162,48 @@
       <Project>{c3cf403c-d94e-4812-8072-97d927afc432}</Project>
       <Name>WinUX.UWP</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="AppMenu\AppMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DraggableContentControl\DraggableContentControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DrawingCanvas\DrawingCanvas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Expander\Expander.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HeaderedTextBlock\HeaderedTextBlock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="RangeSlider\RangeSlider.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Stepper\Stepper.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ValidatingComboBox\ValidatingComboBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ValidatingTextBox\ValidatingTextBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
