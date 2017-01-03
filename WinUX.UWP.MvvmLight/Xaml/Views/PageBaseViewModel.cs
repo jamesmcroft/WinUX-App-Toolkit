@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.MvvmLight.Xaml.Views
+﻿namespace WinUX.MvvmLight.Xaml.Views
 {
     using Windows.Foundation;
     using Windows.UI.Xaml.Navigation;
@@ -6,8 +6,8 @@
     using GalaSoft.MvvmLight.Ioc;
     using GalaSoft.MvvmLight.Messaging;
 
-    using WinUX.UWP.MvvmLight.Common.ViewModels;
-    using WinUX.UWP.Xaml;
+    using WinUX.MvvmLight.Common.ViewModels;
+    using WinUX.Xaml;
 
     /// <summary>
     /// Defines a core base view model for the <see cref="PageBase"/> which contains common page logic.

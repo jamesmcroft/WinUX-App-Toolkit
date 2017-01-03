@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Maths
+﻿namespace WinUX.Maths
 {
     using System.Runtime.InteropServices;
 

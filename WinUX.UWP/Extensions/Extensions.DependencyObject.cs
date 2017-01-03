@@ -1,11 +1,11 @@
-﻿namespace WinUX.UWP.Extensions
+﻿namespace WinUX
 {
     using System;
     using System.Linq.Expressions;
 
     using Windows.UI.Xaml;
 
-    using WinUX.UWP.Xaml;
+    using WinUX.Xaml;
 
     /// <summary>
     /// Defines a collection of extensions for the <see cref="DependencyObject"/>.

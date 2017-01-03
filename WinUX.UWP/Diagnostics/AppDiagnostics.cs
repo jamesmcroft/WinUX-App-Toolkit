@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Diagnostics
+﻿namespace WinUX.Diagnostics
 {
     using System;
     using System.Diagnostics.Tracing;
@@ -7,7 +7,7 @@
     using Windows.Storage;
     using Windows.UI.Xaml;
 
-    using WinUX.UWP.Diagnostics.Tracing;
+    using WinUX.Diagnostics.Tracing;
 
     /// <summary>
     /// Defines a helper for automatically handling any unhandled application errors and logging them to a file.

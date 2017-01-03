@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Messaging.Dialogs
+﻿namespace WinUX.Messaging.Dialogs
 {
     using System;
     using System.Threading;
@@ -7,8 +7,8 @@
     using Windows.UI.Core;
     using Windows.UI.Popups;
 
-    using WinUX.UWP.Diagnostics.Tracing;
-    using WinUX.UWP.Xaml;
+    using WinUX.Diagnostics.Tracing;
+    using WinUX.Xaml;
 
     /// <summary>
     /// Defines a provider for handling the <see cref="MessageDialog"/>.

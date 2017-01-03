@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Device.Profile
+﻿namespace WinUX.Device.Profile
 {
     using WinUX.Attributes;
 

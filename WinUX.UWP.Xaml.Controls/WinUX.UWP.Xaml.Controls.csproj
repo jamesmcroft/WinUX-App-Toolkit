@@ -7,7 +7,7 @@
     <ProjectGuid>{73287114-05C8-47D3-A1FF-CE866F12917C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WinUX.UWP.Xaml.Controls</RootNamespace>
+    <RootNamespace>WinUX.Xaml.Controls</RootNamespace>
     <AssemblyName>WinUX.UWP.Xaml.Controls</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>

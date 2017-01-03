@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Controls.ToggleButton
+﻿namespace WinUX.Controls.ToggleButton
 {
     using System.Linq;
 
@@ -6,7 +6,7 @@
     using Windows.UI.Xaml.Controls;
     using Windows.UI.Xaml.Controls.Primitives;
 
-    using WinUX.UWP.Extensions;
+    using WinUX.Extensions;
 
     /// <summary>
     /// Defines an extension to the <see cref="ToggleButton"/> control to add grouping support similar to <see cref="RadioButton"/>.

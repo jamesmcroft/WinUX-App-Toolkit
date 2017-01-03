@@ -1,0 +1,36 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+    <ResourceDictionary.ThemeDictionaries>
+        <ResourceDictionary x:Key="Light">
+            <Color x:Key="MaterialBackgroundColor">#FFFFFFFF</Color>
+            <SolidColorBrush x:Key="MaterialBackgroundBrush" Color="{StaticResource MaterialBackgroundColor}" />
+
+            <Color x:Key="MaterialPaperBackgroundColor">#FFFAFAFA</Color>
+            <SolidColorBrush x:Key="MaterialPaperBackgroundBrush" Color="{StaticResource MaterialPaperBackgroundColor}" />
+
+            <Color x:Key="MaterialBodyForegroundColor">#DD000000</Color>
+            <SolidColorBrush x:Key="MaterialBodyForegroundBrush" Color="{StaticResource MaterialBodyForegroundColor}" />
+
+            <Color x:Key="MaterialBodyLightForegroundColor">#89000000</Color>
+            <SolidColorBrush x:Key="MaterialBodyLightForegroundBrush" Color="{StaticResource MaterialBodyLightForegroundColor}" />
+        </ResourceDictionary>
+
+        <ResourceDictionary x:Key="Dark">
+            <Color x:Key="MaterialBackgroundColor">#FF000000</Color>
+            <SolidColorBrush x:Key="MaterialBackgroundBrush" Color="{StaticResource MaterialBackgroundColor}" />
+
+            <Color x:Key="MaterialPaperBackgroundColor">#FF37474F</Color>
+            <SolidColorBrush x:Key="MaterialPaperBackgroundBrush" Color="{StaticResource MaterialPaperBackgroundColor}" />
+
+            <Color x:Key="MaterialBodyForegroundColor">#DDFFFFFF</Color>
+            <SolidColorBrush x:Key="MaterialBodyForegroundBrush" Color="{StaticResource MaterialBodyForegroundColor}" />
+
+            <Color x:Key="MaterialBodyLightForegroundColor">#89FFFFFF</Color>
+            <SolidColorBrush x:Key="MaterialBodyLightForegroundBrush" Color="{StaticResource MaterialBodyLightForegroundColor}" />
+        </ResourceDictionary>
+    </ResourceDictionary.ThemeDictionaries>
+    
+</ResourceDictionary>

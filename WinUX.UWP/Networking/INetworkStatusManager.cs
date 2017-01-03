@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Networking
+﻿namespace WinUX.Networking
 {
     /// <summary>
     /// Defines an interface for a network status manager.

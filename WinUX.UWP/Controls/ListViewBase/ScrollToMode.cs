@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Controls.ListViewBase
+﻿namespace WinUX.Controls.ListViewBase
 {
     /// <summary>
     /// Defines the enumeration values for a ListViewBase scroll to mode.

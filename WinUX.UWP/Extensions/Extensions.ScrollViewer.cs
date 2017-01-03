@@ -1,8 +1,8 @@
-﻿namespace WinUX.UWP.Extensions
+﻿namespace WinUX
 {
     using Windows.UI.Xaml.Controls;
 
-    using WinUX.UWP.Controls.ScrollViewer;
+    using WinUX.Controls.ScrollViewer;
 
     /// <summary>
     /// Defines a collection of extensions for the ScrollViewer control.

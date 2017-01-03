@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Extensions
+﻿namespace WinUX
 {
     using System;
     using System.Collections.Generic;
@@ -11,7 +11,6 @@
 
     using WinUX.Common;
     using WinUX.Storage;
-    using WinUX.UWP.Storage;
 
     /// <summary>
     /// Defines a collection of extensions for <see cref="StorageFile"/>.

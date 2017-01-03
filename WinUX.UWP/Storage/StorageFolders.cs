@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Storage
+﻿namespace WinUX.Storage
 {
     /// <summary>
     ///   Defines names for typical storage folders.

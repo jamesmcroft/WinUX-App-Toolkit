@@ -1,11 +1,11 @@
-﻿namespace WinUX.UWP.Input.Speech
+﻿namespace WinUX.Input.Speech
 {
     using System;
     using System.Collections.Generic;
 
     using Windows.Media.SpeechRecognition;
 
-    using WinUX.UWP.Extensions;
+    using WinUX.Extensions;
 
     /// <summary>
     /// Defines a model for a speech command.

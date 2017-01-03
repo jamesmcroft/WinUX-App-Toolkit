@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Xaml
+﻿namespace WinUX.Xaml
 {
     using System;
 

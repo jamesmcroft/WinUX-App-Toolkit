@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Xaml
+﻿namespace WinUX.Xaml
 {
     /// <summary>
     /// Defines the enumeration values for an adaptive state's mode.

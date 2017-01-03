@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Extensions
+﻿namespace WinUX
 {
     using System;
     using System.Collections.Generic;

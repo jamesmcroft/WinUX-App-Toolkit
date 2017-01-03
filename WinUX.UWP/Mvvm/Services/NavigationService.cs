@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Mvvm.Services
+﻿namespace WinUX.Mvvm.Services
 {
     using System;
     using System.Linq;
@@ -9,7 +9,7 @@
     using Windows.UI.Xaml.Media.Animation;
     using Windows.UI.Xaml.Navigation;
 
-    using WinUX.UWP.Diagnostics.Tracing;
+    using WinUX.Diagnostics.Tracing;
 
     /// <summary>
     /// Defines a basic navigation service handler for Windows applications.

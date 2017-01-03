@@ -1,6 +1,6 @@
-﻿namespace WinUX.UWP.Application.ViewManagement
+﻿namespace WinUX.Application.ViewManagement
 {
-    using WinUX.UWP.Mvvm.Services;
+    using WinUX.Mvvm.Services;
 
     /// <summary>
     /// Defines a manager for view <see cref="INavigationService"/>s.

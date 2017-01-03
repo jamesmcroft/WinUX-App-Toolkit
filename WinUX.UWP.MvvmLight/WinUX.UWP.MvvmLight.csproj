@@ -7,7 +7,7 @@
     <ProjectGuid>{CF6B91E4-3158-4D31-B0FB-E6C439F53A77}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WinUX.UWP.MvvmLight</RootNamespace>
+    <RootNamespace>WinUX.MvvmLight</RootNamespace>
     <AssemblyName>WinUX.UWP.MvvmLight</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>

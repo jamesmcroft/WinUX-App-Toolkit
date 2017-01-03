@@ -1,10 +1,10 @@
-﻿namespace WinUX.UWP.Networking
+﻿namespace WinUX.Networking
 {
     using System;
 
     using Windows.Networking.Connectivity;
 
-    using WinUX.UWP.Diagnostics.Tracing;
+    using WinUX.Diagnostics.Tracing;
 
     /// <summary>
     /// Defines a helper for the current network status of the device running the application.

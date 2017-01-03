@@ -1,8 +1,8 @@
-﻿namespace WinUX.UWP.Extensions
+﻿namespace WinUX
 {
     using Windows.UI.Xaml.Input;
 
-    using WinUX.UWP.Input.Manipulation;
+    using WinUX.Input.Manipulation;
 
     /// <summary>
     /// Defines a collection of extensions for handling manipulation.

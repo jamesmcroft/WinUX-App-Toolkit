@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Networking.Requests.Json
+﻿namespace WinUX.Networking.Requests.Json
 {
     using System;
     using System.Collections.Generic;

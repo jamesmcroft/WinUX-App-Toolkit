@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Controls.MapElement
+﻿namespace WinUX.Controls.MapElement
 {
     using Windows.UI.Xaml;
     using Windows.UI.Xaml.Controls.Maps;

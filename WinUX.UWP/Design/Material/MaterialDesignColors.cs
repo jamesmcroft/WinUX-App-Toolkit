@@ -1,6 +1,6 @@
-﻿namespace WinUX.UWP.Design.Material
+﻿namespace WinUX.Design.Material
 {
-    using WinUX.UWP.Design.Material.ColorSwatches;
+    using WinUX.Design.Material.ColorSwatches;
 
     /// <summary>
     /// Defines the collection of material design color swatches.

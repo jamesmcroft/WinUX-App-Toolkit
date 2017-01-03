@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Mvvm.Input
+﻿namespace WinUX.Mvvm.Input
 {
     using System;
     using System.Diagnostics;

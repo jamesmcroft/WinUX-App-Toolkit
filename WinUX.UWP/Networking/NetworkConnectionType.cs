@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Networking
+﻿namespace WinUX.Networking
 {
     /// <summary>
     /// Defines the enumeration values for a network's current connection type.

@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Design
+﻿namespace WinUX.Design
 {
     /// <summary>
     /// Defines the enumeration values for an accent color.

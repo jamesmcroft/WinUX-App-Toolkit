@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Mvvm
+﻿namespace WinUX.Mvvm
 {
     using System;
     using System.ComponentModel;
@@ -9,7 +9,7 @@
     using Windows.UI.Core;
     using Windows.UI.Xaml;
 
-    using WinUX.Mvvm;
+    using WinUX.Extensions;
 
     /// <summary>
     /// Defines a bindable base class.

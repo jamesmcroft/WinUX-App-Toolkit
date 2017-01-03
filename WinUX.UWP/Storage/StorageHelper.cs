@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Storage
+﻿namespace WinUX.Storage
 {
     using System;
     using System.IO;

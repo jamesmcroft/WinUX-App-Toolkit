@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Diagnostics
+﻿namespace WinUX.Diagnostics
 {
     using System.Threading.Tasks;
 

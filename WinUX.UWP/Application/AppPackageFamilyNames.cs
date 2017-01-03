@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Application
+﻿namespace WinUX.Application
 {
     using Windows.ApplicationModel;
 

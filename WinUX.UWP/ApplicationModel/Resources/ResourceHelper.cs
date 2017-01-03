@@ -1,10 +1,10 @@
-﻿namespace WinUX.UWP.ApplicationModel.Resources
+﻿namespace WinUX.ApplicationModel.Resources
 {
     using System;
 
     using Windows.ApplicationModel.Resources.Core;
 
-    using WinUX.UWP.Diagnostics.Tracing;
+    using WinUX.Diagnostics.Tracing;
 
     /// <summary>
     /// Defines helper methods for handling application resources in code.

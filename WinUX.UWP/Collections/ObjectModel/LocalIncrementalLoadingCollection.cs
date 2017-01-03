@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Collections.ObjectModel
+﻿namespace WinUX.Collections.ObjectModel
 {
     using System;
     using System.Collections.Generic;
@@ -8,6 +8,8 @@
 
     using Windows.Foundation;
     using Windows.UI.Xaml.Data;
+
+    using WinUX.Extensions;
 
     /// <summary>
     /// Defines an <see cref="ObservableCollection{T}"/> that supports incremental loading of a collection of known items.

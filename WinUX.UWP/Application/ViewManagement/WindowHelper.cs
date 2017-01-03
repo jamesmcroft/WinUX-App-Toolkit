@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Application.ViewManagement
+﻿namespace WinUX.Application.ViewManagement
 {
     using System;
     using System.Threading.Tasks;
@@ -10,9 +10,9 @@
     using Windows.UI.Xaml;
     using Windows.UI.Xaml.Controls;
 
-    using WinUX.UWP.Diagnostics.Tracing;
-    using WinUX.UWP.Messaging.Dialogs;
-    using WinUX.UWP.Mvvm.Services;
+    using WinUX.Diagnostics.Tracing;
+    using WinUX.Messaging.Dialogs;
+    using WinUX.Mvvm.Services;
 
     /// <summary>
     /// Defines helper methods for handling multiple windows of an application.

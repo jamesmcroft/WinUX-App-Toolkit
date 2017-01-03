@@ -1,8 +1,8 @@
-﻿namespace WinUX.UWP.Extensions
+﻿namespace WinUX
 {
     using Windows.System.Profile;
 
-    using WinUX.UWP.Device.Profile;
+    using WinUX.Device.Profile;
 
     /// <summary>
     /// Defines a collection of extensions for code regarding the device.

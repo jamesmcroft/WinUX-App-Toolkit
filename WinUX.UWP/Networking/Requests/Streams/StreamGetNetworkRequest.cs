@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Networking.Requests.Streams
+﻿namespace WinUX.Networking.Requests.Streams
 {
     using System;
     using System.Collections.Generic;

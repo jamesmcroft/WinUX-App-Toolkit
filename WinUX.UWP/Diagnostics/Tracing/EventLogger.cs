@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Diagnostics.Tracing
+﻿namespace WinUX.Diagnostics.Tracing
 {
     using System.Diagnostics.Tracing;
 

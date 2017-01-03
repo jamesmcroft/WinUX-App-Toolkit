@@ -1,6 +1,6 @@
-﻿namespace WinUX.UWP.Application.ViewManagement
+﻿namespace WinUX.Application.ViewManagement
 {
-    using WinUX.UWP.Messaging.Dialogs;
+    using WinUX.Messaging.Dialogs;
 
     /// <summary>
     /// Defines a manager for view <see cref="MessageDialogHelper"/>s.

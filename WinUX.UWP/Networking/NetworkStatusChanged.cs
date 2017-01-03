@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Networking
+﻿namespace WinUX.Networking
 {
     using System;
 

@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Controls.ListViewBase
+﻿namespace WinUX.Controls.ListViewBase
 {
     using System.Windows.Input;
 

@@ -7,7 +7,7 @@
     <ProjectGuid>{C3CF403C-D94E-4812-8072-97D927AFC432}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WinUX.UWP</RootNamespace>
+    <RootNamespace>WinUX</RootNamespace>
     <AssemblyName>WinUX.UWP</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>

@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Networking
+﻿namespace WinUX.Networking
 {
     using System;
     using System.Collections.Concurrent;
@@ -10,7 +10,6 @@
     using Windows.UI.Xaml;
 
     using WinUX.Common;
-    using WinUX.Networking;
     using WinUX.Networking.Requests;
 
     /// <summary>

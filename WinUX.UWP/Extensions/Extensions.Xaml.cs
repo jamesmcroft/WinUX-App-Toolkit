@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Extensions
+﻿namespace WinUX
 {
     using Windows.UI.Xaml.Controls;
     using Windows.UI.Xaml.Markup;

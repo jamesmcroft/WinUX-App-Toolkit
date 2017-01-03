@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Controls.ScrollViewer
+﻿namespace WinUX.Controls.ScrollViewer
 {
     /// <summary>
     /// Defines the enumeration values for a ScrollViewer's mode.

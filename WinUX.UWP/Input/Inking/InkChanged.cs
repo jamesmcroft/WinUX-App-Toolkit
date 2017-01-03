@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Input.Inking
+﻿namespace WinUX.Input.Inking
 {
     using System;
     using System.Collections.Generic;

@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.MvvmLight.Xaml.Views
+﻿namespace WinUX.MvvmLight.Xaml.Views
 {
     using System;
 
@@ -8,10 +8,10 @@
     using Windows.UI.Xaml.Controls;
     using Windows.UI.Xaml.Navigation;
 
-    using WinUX.UWP.Device.Profile;
-    using WinUX.UWP.Diagnostics.Tracing;
-    using WinUX.UWP.Extensions;
-    using WinUX.UWP.Xaml;
+    using WinUX.Device.Profile;
+    using WinUX.Diagnostics.Tracing;
+    using WinUX.Extensions;
+    using WinUX.Xaml;
 
     /// <summary>
     /// Defines an MvvmLight friendly base page.

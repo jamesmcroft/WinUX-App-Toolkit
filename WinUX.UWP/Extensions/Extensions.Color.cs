@@ -1,12 +1,12 @@
-﻿namespace WinUX.UWP.Extensions
+﻿namespace WinUX
 {
     using System.Globalization;
 
     using Windows.UI;
     using Windows.UI.Xaml.Media;
 
-    using WinUX.UWP.Design;
-    using WinUX.UWP.Design.Material;
+    using WinUX.Design;
+    using WinUX.Design.Material;
 
     /// <summary>
     /// Defines a collection of extensions for handling color.

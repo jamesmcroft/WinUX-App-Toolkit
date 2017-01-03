@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Networking
+﻿namespace WinUX.Networking
 {
     /// <summary>
     /// Defines a model for representing a network status.

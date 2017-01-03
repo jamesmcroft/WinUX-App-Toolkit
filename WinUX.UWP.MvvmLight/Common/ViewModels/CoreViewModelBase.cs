@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.MvvmLight.Common.ViewModels
+﻿namespace WinUX.MvvmLight.Common.ViewModels
 {
     using System;
     using System.Threading;
@@ -14,14 +14,14 @@
     using GalaSoft.MvvmLight;
     using GalaSoft.MvvmLight.Messaging;
 
+    using WinUX.Application.ViewManagement;
+    using WinUX.ApplicationModel.Lifecycle;
+    using WinUX.Device.Profile;
+    using WinUX.Diagnostics.Tracing;
     using WinUX.Exceptions;
-    using WinUX.UWP.Application.ViewManagement;
-    using WinUX.UWP.ApplicationModel.Lifecycle;
-    using WinUX.UWP.Device.Profile;
-    using WinUX.UWP.Diagnostics.Tracing;
-    using WinUX.UWP.Extensions;
-    using WinUX.UWP.Messaging.Dialogs;
-    using WinUX.UWP.Mvvm.Services;
+    using WinUX.Extensions;
+    using WinUX.Messaging.Dialogs;
+    using WinUX.Mvvm.Services;
 
     /// <summary>
     /// Defines a core base view model which contains all of the core providers that may be required.
@@ -103,7 +103,7 @@
             =>
             this.IsSecondaryView
                 ? ViewNavigationServiceManager.Current.Get(this.ViewId)
-                : WinUX.UWP.Mvvm.Services.NavigationService.Current;
+                : Mvvm.Services.NavigationService.Current;
 
         /// <summary>
         /// Gets the <see cref="MessageDialogHelper"/> for the view that created this view model.

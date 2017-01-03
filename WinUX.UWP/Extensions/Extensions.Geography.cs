@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Extensions
+﻿namespace WinUX
 {
     using System;
     using System.Collections.Generic;
@@ -7,8 +7,8 @@
     using Windows.Devices.Geolocation;
     using Windows.UI.Xaml.Controls.Maps;
 
+    using WinUX.Application;
     using WinUX.Maths;
-    using WinUX.UWP.Application;
 
     /// <summary>
     /// Defines a collection of extensions for geography, i.e. Bing Maps, MapControl and geo-position.

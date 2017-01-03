@@ -1,8 +1,8 @@
-﻿namespace WinUX.UWP.Design.Material.ColorSwatches
+﻿namespace WinUX.Design.Material.ColorSwatches
 {
     using Windows.UI;
 
-    using WinUX.UWP.Extensions;
+    using WinUX.Extensions;
 
     /// <summary>
     /// Defines the blue material design color swatch.

@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Input.Pointer
+﻿namespace WinUX.Input.Pointer
 {
     /// <summary>
     /// Defines the enumeration values for a pointer's event type.

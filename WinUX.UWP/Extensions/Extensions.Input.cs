@@ -1,10 +1,10 @@
-﻿namespace WinUX.UWP.Extensions
+﻿namespace WinUX
 {
     using Windows.Devices.Input;
     using Windows.UI.Core;
     using Windows.UI.Input;
 
-    using WinUX.UWP.Input.Pointer;
+    using WinUX.Input.Pointer;
 
     /// <summary>
     /// Defines a collection of extensions for handling Windows input devices.

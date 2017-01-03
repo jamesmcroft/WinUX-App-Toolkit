@@ -1,10 +1,10 @@
-﻿namespace WinUX.UWP.Design.Material.ColorSwatches
+﻿namespace WinUX.Design.Material.ColorSwatches
 {
     using System;
 
     using Windows.UI;
 
-    using WinUX.UWP.Extensions;
+    using WinUX.Extensions;
 
     internal sealed class GreyColorSwatch : IMaterialColorSwatch
     {

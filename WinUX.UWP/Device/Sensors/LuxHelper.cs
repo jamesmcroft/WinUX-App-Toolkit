@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Device.Sensors
+﻿namespace WinUX.Device.Sensors
 {
     using System;
 
@@ -6,6 +6,7 @@
     using Windows.UI.Xaml;
 
     using WinUX.Common.Date;
+    using WinUX.Extensions;
 
     /// <summary>
     /// Defines helper methods for handling Light sensors.

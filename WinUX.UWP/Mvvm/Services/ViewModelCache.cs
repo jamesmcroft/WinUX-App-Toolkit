@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Mvvm.Services
+﻿namespace WinUX.Mvvm.Services
 {
     using System;
     using System.Collections.Generic;

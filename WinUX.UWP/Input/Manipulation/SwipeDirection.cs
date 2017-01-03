@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Input.Manipulation
+﻿namespace WinUX.Input.Manipulation
 {
     /// <summary>
     /// Defines the enumeration values for a manipulation swipe direction.

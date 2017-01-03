@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Application.ViewManagement
+﻿namespace WinUX.Application.ViewManagement
 {
     using Windows.UI.Core;
 

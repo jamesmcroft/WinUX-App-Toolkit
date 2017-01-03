@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.ApplicationModel.Lifecycle
+﻿namespace WinUX.ApplicationModel.Lifecycle
 {
     using System.Threading.Tasks;
 

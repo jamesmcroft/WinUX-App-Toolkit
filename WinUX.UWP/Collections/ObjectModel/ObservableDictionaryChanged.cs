@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Collections.ObjectModel
+﻿namespace WinUX.Collections.ObjectModel
 {
     using Windows.Foundation.Collections;
 

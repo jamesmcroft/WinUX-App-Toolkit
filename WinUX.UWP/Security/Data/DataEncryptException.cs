@@ -1,4 +1,4 @@
-﻿namespace WinUX.UWP.Security.Data
+﻿namespace WinUX.Security.Data
 {
     using System;
 
