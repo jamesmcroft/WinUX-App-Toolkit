@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="44199JCroftApps.WinUXUWPSamples" Publisher="CN=A23A4004-325F-45CC-9CA8-C1EFD37C8557" Version="2.4.0.0" />
+  <Identity Name="44199JCroftApps.WinUXUWPSamples" Publisher="CN=A23A4004-325F-45CC-9CA8-C1EFD37C8557" Version="2.4.4.0" />
   <mp:PhoneIdentity PhoneProductId="729f442a-5f8d-4eff-b696-b917215f35ce" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>WinUX UWP Samples</DisplayName>
