@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>WinUX.UWP.Xaml</id>
+    <version>2.0.0</version>
+    <title>WinUX.UWP.Xaml</title>
+    <authors>James Croft</authors>
+    <owners>James Croft</owners>
+    <licenseUrl>https://github.com/jamesmcroft/WinUX-UWP-Toolkit/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/jamesmcroft/WinUX-UWP-Toolkit</projectUrl>
+    <iconUrl>http://jamescroft.co.uk/wp-content/uploads/2014/12/icon1.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>This library contains a collection of UWP XAML components such as Visual State triggers, Behaviors and value converters that can be used in a variety of UWP applications built by the community.</description>
+    <releaseNotes>Added Material Design color XAML resources.</releaseNotes>
+    <copyright>Copyright (c) James Croft. All rights reserved.</copyright>
+    <tags>WinUX UWP Inking MapControl Extensions Components VisualStateTrigger Behaviors Material Design</tags>
+    <dependencies>
+      <dependency id="Microsoft.Xaml.Behaviors.Uwp.Managed" version="2.0.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\WinUX.UWP.Xaml.dll" target="lib\netcore50" />
+    <file src="bin\Release\WinUX.UWP.Xaml.pri" target="lib\netcore50" />
+    <file src="bin\Release\WinUX.UWP.Xaml.xml" target="lib\netcore50" />
+    <file src="bin\Release\WinUX.UWP.Xaml.xr.xml" target="lib\netcore50\WinUX.UWP.Xaml" />
+    <file src="bin\Release\Themes\**\*.*" target="lib\netcore50\WinUX.UWP.Xaml\Themes" />
+  </files>
+</package>

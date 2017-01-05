@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>WinUX.UWP.MvvmLight</id>
+    <version>2.0.0</version>
+    <title>WinUX.UWP.MvvmLight</title>
+    <authors>James Croft</authors>
+    <owners>James Croft</owners>
+    <licenseUrl>https://github.com/jamesmcroft/WinUX-UWP-Toolkit/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/jamesmcroft/WinUX-UWP-Toolkit</projectUrl>
+    <iconUrl>http://jamescroft.co.uk/wp-content/uploads/2014/12/icon1.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>This library contains a collection of extended MvvmLight components that can be used in a variety of UWP applications built by the community.</description>
+    <releaseNotes>Initial release. Contains PageBase, PageBaseViewModel and CoreViewModelBase.</releaseNotes>
+    <copyright>Copyright (c) James Croft. All rights reserved.</copyright>
+    <tags>WinUX UWP Extensions XAML Components ViewModel Mvvm MvvmLight MultiWindow</tags>
+    <dependencies>
+      <dependency id="MvvmLightLibs" version="5.3.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\WinUX.UWP.MvvmLight.dll" target="lib\netcore50" />
+    <file src="bin\Release\WinUX.UWP.MvvmLight.pri" target="lib\netcore50" />
+    <file src="bin\Release\WinUX.UWP.MvvmLight.xml" target="lib\netcore50" />
+  </files>
+</package>

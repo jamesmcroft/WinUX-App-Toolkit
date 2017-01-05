@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>WinUX.Common</id>
+    <version>2.0.0</version>
+    <title>WinUX.Common</title>
+    <authors>James Croft</authors>
+    <owners>James Croft</owners>
+    <licenseUrl>https://github.com/jamesmcroft/WinUX-UWP-Toolkit/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/jamesmcroft/WinUX-UWP-Toolkit</projectUrl>
+    <iconUrl>http://jamescroft.co.uk/wp-content/uploads/2014/12/icon1.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>This library contains a collection of common .NET components and extensions that can be used in a variety of .NET solutions built by the community.</description>
+    <releaseNotes>Release for code restructure.</releaseNotes>
+    <copyright>Copyright (c) James Croft. All rights reserved.</copyright>
+    <tags>WinUX .NET Extensions Components Web UWP Xamarin</tags>
+    <dependencies>
+      <dependency id="Newtonsoft.Json" version="9.0.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\WinUX.Common.XML" target="lib\portable-net451+win81+MonoAndroid10+xamarinios10+MonoTouch10" />
+    <file src="bin\Release\WinUX.Common.dll" target="lib\portable-net451+win81+MonoAndroid10+xamarinios10+MonoTouch10" />
+    <file src="bin\Release\WinUX.Common.XML" target="lib\portable46-net451+win81" />
+    <file src="bin\Release\WinUX.Common.dll" target="lib\portable46-net451+win81" />
+  </files>
+</package>

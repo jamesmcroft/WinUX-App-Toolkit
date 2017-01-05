@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>WinUX.UWP</id>
+    <version>2.0.0</version>
+    <title>WinUX.UWP</title>
+    <authors>James Croft</authors>
+    <owners>James Croft</owners>
+    <licenseUrl>https://github.com/jamesmcroft/WinUX-UWP-Toolkit/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/jamesmcroft/WinUX-UWP-Toolkit</projectUrl>
+    <iconUrl>http://jamescroft.co.uk/wp-content/uploads/2014/12/icon1.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>This library contains a collection of common UWP specific components and extensions that can be used in a variety of UWP applications built by the community.</description>
+    <releaseNotes>Release for code restructure.</releaseNotes>
+    <copyright>Copyright (c) James Croft. All rights reserved.</copyright>
+    <tags>WinUX UWP Extensions Components</tags>
+    <dependencies>
+      <dependency id="Win2D.uwp" version="1.19.0" />
+      <dependency id="WriteableBitmapEx" version="1.5.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\WinUX.UWP.dll" target="lib\netcore50" />
+    <file src="bin\Release\WinUX.UWP.pri" target="lib\netcore50" />
+    <file src="bin\Release\WinUX.UWP.XML" target="lib\netcore50" />
+  </files>
+</package>

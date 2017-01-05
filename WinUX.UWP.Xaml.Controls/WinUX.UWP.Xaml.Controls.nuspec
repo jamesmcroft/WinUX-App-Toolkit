@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>WinUX.UWP.Xaml.Controls</id>
+    <version>2.0.0</version>
+    <title>WinUX.UWP.Xaml.Controls</title>
+    <authors>James Croft</authors>
+    <owners>James Croft</owners>
+    <licenseUrl>https://github.com/jamesmcroft/WinUX-UWP-Toolkit/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/jamesmcroft/WinUX-UWP-Toolkit</projectUrl>
+    <iconUrl>http://jamescroft.co.uk/wp-content/uploads/2014/12/icon1.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>This library contains a collection of custom UWP XAML controls that can be used in a variety of UWP applications built by the community.</description>
+    <releaseNotes>Added Stepper control and updated Expander to use animations.</releaseNotes>
+    <copyright>Copyright (c) James Croft. All rights reserved.</copyright>
+    <tags>WinUX UWP Controls Behaviors AppMenu DraggableContentControl DrawingCanvas Expander HeaderedTextBlock RangeSlider Stepper UniformWidthPanel ValidatingComboBox ValidatingTextBox WrapPanel</tags>
+    <dependencies>
+      <dependency id="Microsoft.Xaml.Behaviors.Uwp.Managed" version="2.0.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\WinUX.UWP.Xaml.Controls.dll" target="lib\netcore50" />
+    <file src="bin\Release\WinUX.UWP.Xaml.Controls.pri" target="lib\netcore50" />
+    <file src="bin\Release\WinUX.UWP.Xaml.Controls.xml" target="lib\netcore50" />
+    <file src="bin\Release\WinUX.UWP.Xaml.Controls.xr.xml" target="lib\netcore50\WinUX.UWP.Xaml.Controls" />
+    <file src="bin\Release\AppMenu\**\*.*" target="lib\netcore50\WinUX.UWP.Xaml.Controls\AppMenu" />
+    <file src="bin\Release\DraggableContentControl\**\*.*" target="lib\netcore50\WinUX.UWP.Xaml.Controls\DraggableContentControl" />
+    <file src="bin\Release\DrawingCanvas\**\*.*" target="lib\netcore50\WinUX.UWP.Xaml.Controls\DrawingCanvas" />
+    <file src="bin\Release\Expander\**\*.*" target="lib\netcore50\WinUX.UWP.Xaml.Controls\Expander" />
+    <file src="bin\Release\HeaderedTextBlock\**\*.*" target="lib\netcore50\WinUX.UWP.Xaml.Controls\HeaderedTextBlock" />
+    <file src="bin\Release\RangeSlider\**\*.*" target="lib\netcore50\WinUX.UWP.Xaml.Controls\RangeSlider" />
+    <file src="bin\Release\Stepper\**\*.*" target="lib\netcore50\WinUX.UWP.Xaml.Controls\Stepper" />
+    <file src="bin\Release\Themes\**\*.*" target="lib\netcore50\WinUX.UWP.Xaml.Controls\Themes" />
+    <file src="bin\Release\ValidatingComboBox\**\*.*" target="lib\netcore50\WinUX.UWP.Xaml.Controls\ValidatingComboBox" />
+    <file src="bin\Release\ValidatingTextBox\**\*.*" target="lib\netcore50\WinUX.UWP.Xaml.Controls\ValidatingTextBox" />
+  </files>
+</package>
