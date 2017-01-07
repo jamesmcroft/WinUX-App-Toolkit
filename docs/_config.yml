@@ -1,1 +1,20 @@
-theme: jekyll-theme-minimal
+title: WinUX UWP Toolkit Docs
+email: me@jamescroft.co.uk
+description: > # this means to ignore newlines until "baseurl:"
+  WinUX UWP is the essential toolkit to get developers started with the XAML 
+  controls, converters, behaviors, state triggers and extensions commonly 
+  used in Windows 10 app development.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: jamesmcroft
+github_username:  jamesmcroft
+
+# Build settings
+highlighter: rouge
+markdown: kramdown
+theme: minima
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
