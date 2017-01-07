@@ -6,3 +6,24 @@
 .post-list > li {
     margin-bottom: 0;
 }
+
+table {
+    margin-bottom: 15px;
+}
+
+thead {
+    background-color: #2196f3;
+    color: #ffffff;
+}
+
+tbody {
+    background-color: #eeeeee;
+}
+
+th {
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+}
