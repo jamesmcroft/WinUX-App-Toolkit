@@ -8,6 +8,26 @@
     public class DateTimeValidationRule : ValidationRule
     {
         /// <summary>
+        ///  Gets or sets the minimum of <see cref="DateTime"/>.
+        ///  The default value is DateTime.MinValue
+        /// </summary>
+        public DateTime MinDateTime
+        {
+            set;
+            get;
+        } = DateTime.MinValue;
+
+        /// <summary>
+        /// Gets or sets the maximum of <see cref="DateTime"/>.
+        /// The default value is DateTime.MaxValue
+        /// </summary>
+        public DateTime MaxDateTime
+        {
+            set;
+            get;
+        } = DateTime.MaxValue;
+
+        /// <summary>
         /// Validates the specified object is a <see cref="DateTime"/>.
         /// </summary>
         /// <param name="value">
@@ -27,7 +47,11 @@
             }
 
             DateTime temp;
-            return DateTime.TryParse(val, out temp);
+            if (DateTime.TryParse(val, out temp))
+            {
+                return temp >= MinDateTime && temp <= MaxDateTime;
+            }
+            return false;
         }
     }
 }

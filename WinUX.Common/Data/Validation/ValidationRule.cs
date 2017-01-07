@@ -13,7 +13,7 @@
         /// <remarks>
         /// The default error message is currently in English as 'Field invalid'.
         /// </remarks>
-        public string DefaultErrorMessage { set; get; } = "Field invalid.";
+        public static string DefaultErrorMessage { set; get; } = "Field invalid.";
 
         /// <summary>
         /// Gets the error message to display for the rule.
@@ -22,7 +22,7 @@
         {
             get
             {
-                return string.IsNullOrWhiteSpace(this.errorMessage) ? this.DefaultErrorMessage : this.errorMessage;
+                return string.IsNullOrWhiteSpace(this.errorMessage) ? DefaultErrorMessage : this.errorMessage;
             }
             set
             {
