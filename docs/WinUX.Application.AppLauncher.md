@@ -23,7 +23,7 @@ Launches an application with the specified application ID using the specified ur
 | Name | Type | Description |
 |---|---|---|
 | uri | Uri | The URI/query to pass to the launching application. |
-| applicationPackageFamilyName | string | The package family name of the application to launch. |
+| applicationPackageFamilyName | string | The package family name of the application to launch. More info - [AppPackageFamilyNames](winux-application-apppackagefamilynames) |
 | promptToLaunch | bool | A value indicating whether to show a prompt when launching the application. |
 
 #### Example usage
