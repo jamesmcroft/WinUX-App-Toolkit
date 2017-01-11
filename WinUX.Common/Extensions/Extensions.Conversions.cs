@@ -2,6 +2,9 @@
 {
     using System;
 
+    /// <summary>
+    /// Defines a collection of extensions for converting values to other values.
+    /// </summary>
     public static partial class Extensions
     {
         /// <summary>

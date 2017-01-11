@@ -6,7 +6,7 @@
     using System.Threading.Tasks;
 
     /// <summary>
-    /// Defines the model for a network process.
+    /// Defines the model for a network request.
     /// </summary>
     public abstract class NetworkRequest
     {

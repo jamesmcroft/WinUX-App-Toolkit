@@ -4,6 +4,9 @@
 
     using Windows.Storage;
 
+    /// <summary>
+    /// Defines an interface for an app diagnostics provider.
+    /// </summary>
     public interface IAppDiagnostics
     {
         /// <summary>

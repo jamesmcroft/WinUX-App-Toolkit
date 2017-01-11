@@ -1,9 +1,9 @@
 ﻿namespace WinUX.Maths
 {
     using System.Runtime.InteropServices;
-
+    
     /// <summary>
-    /// Defines a model for a union of NaN values.
+    /// Defines a C++ style type union used for efficiently converting a double into an unsigned long, whose bits can be easily manipulated.
     /// </summary>
     [StructLayout(LayoutKind.Explicit)]
     public struct NanUnion

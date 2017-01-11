@@ -14,7 +14,7 @@
         /// Launches an application with the specified application ID using the specified uri URI.
         /// </summary>
         /// <param name="uri">
-        /// The uri URI to pass to the application.
+        /// The URI to pass to the application.
         /// </param>
         /// <param name="applicationPackageFamilyName">
         /// The package family name of the application to launch.
