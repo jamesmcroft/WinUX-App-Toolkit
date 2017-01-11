@@ -7,7 +7,7 @@
     using Windows.UI.Xaml.Media.Imaging;
 
     /// <summary>
-    /// Defines a value converter for converting a <see cref="byte"/> array into an <see cref="BitmapSource"/> value.
+    /// Defines a value converter for converting a <see cref="byte"/> array into a <see cref="BitmapSource"/> value.
     /// </summary>
     public sealed class ByteArrayToImageSourceConverter : IValueConverter
     {

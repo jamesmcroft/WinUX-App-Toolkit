@@ -1,7 +1,7 @@
 ﻿namespace WinUX.Storage
 {
     /// <summary>
-    /// Defines the enumeration values for a files's size format.
+    /// Defines the enumeration values for a file's size format.
     /// </summary>
     public enum FileSizeFormat
     {

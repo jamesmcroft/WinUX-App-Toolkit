@@ -7,7 +7,7 @@
     using WinUX.Common;
 
     /// <summary>
-    /// Defines a value converter for converting a double to a TimeSpan.
+    /// Defines a value converter for converting a seconds value as a double to a TimeSpan.
     /// </summary>
     public class DoubleToTimeSpanConverter : IValueConverter
     {

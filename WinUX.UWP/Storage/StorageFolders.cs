@@ -1,7 +1,7 @@
 ﻿namespace WinUX.Storage
 {
     /// <summary>
-    ///   Defines names for typical storage folders.
+    /// Defines names for typical storage folders.
     /// </summary>
     public static class StorageFolders
     {

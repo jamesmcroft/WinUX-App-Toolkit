@@ -4,7 +4,7 @@
     using System.Threading;
 
     /// <summary>
-    /// Defines a helper for using the <see cref="SynchronizationContextHelper"/>.
+    /// Defines a helper for using the <see cref="SynchronizationContext"/>.
     /// </summary>
     public static class SynchronizationContextHelper
     {
