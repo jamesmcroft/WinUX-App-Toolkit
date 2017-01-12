@@ -1,6 +1,6 @@
 ---
 layout: subpage
-title: WinUX.Application.AppPackageFamilyNames
+title: AppPackageFamilyNames
 permalink: /ref/winux-application-apppackagefamilynames
 ---
 

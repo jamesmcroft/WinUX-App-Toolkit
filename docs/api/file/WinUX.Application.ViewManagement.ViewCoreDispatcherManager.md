@@ -1,6 +1,6 @@
 ---
 layout: subpage
-title: WinUX.Application.ViewManagement.ViewCoreDispatcherManager
+title: ViewCoreDispatcherManager
 permalink: /ref/winux-application-viewmanagement-viewcoredispatchermanager
 ---
 

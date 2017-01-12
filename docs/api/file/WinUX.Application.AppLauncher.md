@@ -1,6 +1,6 @@
 ---
 layout: subpage
-title: WinUX.Application.AppLauncher
+title: AppLauncher
 permalink: /ref/winux-application-applauncher
 ---
 
