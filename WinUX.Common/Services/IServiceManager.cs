@@ -41,7 +41,7 @@
         /// Gets a registered service from the manager if exists.
         /// </summary>
         /// <param name="key">
-        /// The key for the service..
+        /// The key for the service.
         /// </param>
         /// <returns>
         /// Returns the registered service if exists; else null.

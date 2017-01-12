@@ -8,7 +8,7 @@
     using Microsoft.Xaml.Interactivity;
 
     /// <summary>
-    /// An action for a behavior to execute a set of actions on a timeout.
+    /// Defines an action for a behavior to execute a set of actions on a timeout.
     /// </summary>
     [ContentProperty(Name = nameof(Actions))]
     public sealed class TimeoutAction : DependencyObject, IAction
