@@ -7,6 +7,7 @@
     using Windows.UI.Core;
     using Windows.UI.Popups;
 
+    using WinUX.Application.ViewManagement;
     using WinUX.Diagnostics.Tracing;
     using WinUX.Xaml;
 
@@ -42,6 +43,10 @@
         /// <summary>
         /// Gets an instance of the <see cref="MessageDialogManager"/>.
         /// </summary>
+        /// <remarks>
+        /// Only use current in conjunction with the <see cref="UIDispatcher"/>.
+        /// It is not intended to be used with <see cref="ViewMessageDialogManager"/>.
+        /// </remarks>
         public static MessageDialogManager Current
             => current ?? (current = new MessageDialogManager(UIDispatcher.Instance));
 

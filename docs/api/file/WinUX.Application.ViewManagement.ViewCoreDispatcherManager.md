@@ -27,7 +27,7 @@ public class ViewCoreDispatcherManager
 
 | Name | Type | Description |
 |---|---|---|
-| ServiceChanged | ServiceChangedEventHandler<int, TService> | Invoked when a service has changed for a given view ID. |
+| ServiceChanged | ServiceChangedEventHandler<int, CoreDispatcher> | Invoked when a service has changed for a given view ID. |
 
 ## Static Methods
 

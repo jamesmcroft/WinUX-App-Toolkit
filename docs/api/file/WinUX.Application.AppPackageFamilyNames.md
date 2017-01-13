@@ -6,6 +6,10 @@ permalink: /ref/winux-application-apppackagefamilynames
 
 Provides a static list of application package family names for use with the [AppLauncher](winux-application-applauncher).
 
+## NuGet
+
+Exists within the [WinUX.UWP](https://www.nuget.org/packages/WinUX.UWP/) NuGet package.
+
 ## Syntax
 
 ```csharp

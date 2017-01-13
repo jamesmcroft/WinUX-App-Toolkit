@@ -6,6 +6,10 @@ permalink: /ref/winux-application-applauncher
 
 Provides a simple mechanism for launching external applications.
 
+## NuGet
+
+Exists within the [WinUX.UWP](https://www.nuget.org/packages/WinUX.UWP/) NuGet package.
+
 ## Syntax
 
 ```csharp
