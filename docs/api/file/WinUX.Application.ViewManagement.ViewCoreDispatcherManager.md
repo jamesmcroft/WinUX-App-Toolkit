@@ -4,16 +4,20 @@ title: ViewCoreDispatcherManager
 permalink: /ref/winux-application-viewmanagement-viewcoredispatchermanager
 ---
 
-Provides a simple to use manager for view CoreDispatchers.
+Provides a simple to use manager for a view's CoreDispatcher.
 
 ## NuGet
 
 Exists within the [WinUX.UWP](https://www.nuget.org/packages/WinUX.UWP/) NuGet package.
 
+## Inheritance
+- [ViewServiceManager](winux-application-viewmanagement-viewservicemanager)
+    - **ViewCoreDispatcherManager**
+
 ## Syntax
 
 ```csharp
-public class ViewCoreDispatcherManager
+public class ViewCoreDispatcherManager : ViewServiceManager<CoreDispatcher>
 ```
 
 ## Fields

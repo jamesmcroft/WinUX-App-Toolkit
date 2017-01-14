@@ -4,16 +4,20 @@ title: ViewMessageDialogManager
 permalink: /ref/winux-application-viewmanagement-viewmessagedialogmanager
 ---
 
-Provides a simple to use manager for view MessageDialogManagers.
+Provides a simple to use manager for a view's [MessageDialogManager](winux-messaging-dialogs-messagedialogmanager).
 
 ## NuGet
 
 Exists within the [WinUX.UWP](https://www.nuget.org/packages/WinUX.UWP/) NuGet package.
 
+## Inheritance
+- [ViewServiceManager](winux-application-viewmanagement-viewservicemanager)
+    - **ViewMessageDialogManager**
+
 ## Syntax
 
 ```csharp
-public class ViewMessageDialogManager
+public class ViewMessageDialogManager : ViewServiceManager<MessageDialogManager>
 ```
 
 ## Fields

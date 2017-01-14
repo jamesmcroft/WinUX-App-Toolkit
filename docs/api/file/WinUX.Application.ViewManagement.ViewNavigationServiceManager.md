@@ -4,16 +4,20 @@ title: ViewNavigationServiceManager
 permalink: /ref/winux-application-viewmanagement-viewnavigationservicemanager
 ---
 
-Provides a simple to use manager for view ViewNavigationServiceManagers.
+Provides a simple to use manager for a view's [INavigationService](winux-mvvm-services-inavigationservice).
 
 ## NuGet
 
 Exists within the [WinUX.UWP](https://www.nuget.org/packages/WinUX.UWP/) NuGet package.
 
+## Inheritance
+- [ViewServiceManager](winux-application-viewmanagement-viewservicemanager)
+    - **ViewNavigationServiceManager**
+
 ## Syntax
 
 ```csharp
-public class ViewNavigationServiceManager
+public class ViewNavigationServiceManager : ViewServiceManager<INavigationService>
 ```
 
 ## Fields
