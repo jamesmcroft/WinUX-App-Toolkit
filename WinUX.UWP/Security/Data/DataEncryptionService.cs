@@ -37,10 +37,10 @@
                                try
                                {
                                    var buffer = CryptographicBuffer.CreateFromByteArray(data);
-                                   var aes = SymmetricKeyAlgorithmProvider.OpenAlgorithm(this.encryptionAlgorithm);
+                                   var algorithm = SymmetricKeyAlgorithmProvider.OpenAlgorithm(this.encryptionAlgorithm);
                                    var key = this.keyHash;
-                                   var cryptoKey = aes.CreateSymmetricKey(key);
-                                   return CryptographicEngine.Encrypt(cryptoKey, buffer, null);
+                                   var symmetricKey = algorithm.CreateSymmetricKey(key);
+                                   return CryptographicEngine.Encrypt(symmetricKey, buffer, null);
                                }
                                catch (Exception ex)
                                {
@@ -65,9 +65,9 @@
                                try
                                {
                                    var algorithm = SymmetricKeyAlgorithmProvider.OpenAlgorithm(this.encryptionAlgorithm);
-                                   var cryptoKey = algorithm.CreateSymmetricKey(this.keyHash);
-                                   var decrypted = CryptographicEngine.Decrypt(cryptoKey, data, null);
-                                   return decrypted;
+                                   var symmetricKey = algorithm.CreateSymmetricKey(this.keyHash);
+                                   var buffer = CryptographicEngine.Decrypt(symmetricKey, data, null);
+                                   return buffer;
                                }
                                catch (Exception ex)
                                {
@@ -80,10 +80,10 @@
         {
             if (string.IsNullOrWhiteSpace(data)) return null;
 
-            var buffUtf8Msg = CryptographicBuffer.ConvertStringToBinary(data, BinaryStringEncoding.Utf8);
-            var objAlgProv = HashAlgorithmProvider.OpenAlgorithm(algorithm);
-            var buffHash = objAlgProv.HashData(buffUtf8Msg);
-            return buffHash.Length != objAlgProv.HashLength ? null : buffHash;
+            var encodedBuffer = CryptographicBuffer.ConvertStringToBinary(data, BinaryStringEncoding.Utf8);
+            var hashAlgorithm = HashAlgorithmProvider.OpenAlgorithm(algorithm);
+            var hash = hashAlgorithm.HashData(encodedBuffer);
+            return hash.Length != hashAlgorithm.HashLength ? null : hash;
         }
     }
 }
