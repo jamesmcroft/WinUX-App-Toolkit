@@ -105,9 +105,9 @@
         /// </summary>
         public void Update()
         {
-            bool[] isInvalid = { !this.IsMandatoryFieldValid() };
+            var isInvalid = !this.IsMandatoryFieldValid();
 
-            this.IsInvalid = isInvalid[0];
+            this.IsInvalid = isInvalid;
 
             VisualStateManager.GoToState(this, this.IsInvalid ? "Invalid" : "Valid", true);
 

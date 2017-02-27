@@ -102,16 +102,16 @@
         {
             this.UpdateRemainingCharacters();
 
-            bool[] isInvalid = { !this.IsMandatoryFieldValid() };
+            var isInvalid = !this.IsMandatoryFieldValid();
 
-            if (!isInvalid[0])
+            if (!isInvalid)
             {
                 if (this.MaxLength > 0)
                 {
-                    isInvalid[0] = this.Text.Length > this.MaxLength;
+                    isInvalid = this.Text.Length > this.MaxLength;
                 }
 
-                if (isInvalid[0])
+                if (isInvalid)
                 {
                     if (this.ValidationTextBlock != null)
                     {
@@ -123,11 +123,11 @@
                     if (this.ValidationRules != null)
                     {
                         // Run through all of the validation rules for this text box and check is valid.
-                        foreach (var rule in this.ValidationRules.Rules.TakeWhile(rule => !isInvalid[0]))
+                        foreach (var rule in this.ValidationRules.Rules.TakeWhile(rule => !isInvalid))
                         {
-                            isInvalid[0] = !rule.IsValid(this.Text);
+                            isInvalid = !rule.IsValid(this.Text);
 
-                            if (isInvalid[0] && this.ValidationTextBlock != null)
+                            if (isInvalid && this.ValidationTextBlock != null)
                             {
                                 this.ValidationTextBlock.Text = rule.ErrorMessage;
                             }
@@ -136,7 +136,7 @@
                 }
             }
 
-            this.IsInvalid = isInvalid[0];
+            this.IsInvalid = isInvalid;
 
             VisualStateManager.GoToState(this, this.IsInvalid ? "Invalid" : "Valid", true);
 
