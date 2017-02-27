@@ -5,15 +5,9 @@
     /// </summary>
     public abstract class ValidationRule
     {
-        private string errorMessage;
+        public static string DefaultErrorMessage = "Field invalid.";
 
-        /// <summary>
-        /// Gets or sets the default error message for the validation rule.
-        /// </summary>
-        /// <remarks>
-        /// The default error message is currently in English as 'Field invalid'.
-        /// </remarks>
-        public static string DefaultErrorMessage { set; get; } = "Field invalid.";
+        private string errorMessage;
 
         /// <summary>
         /// Gets the error message to display for the rule.
