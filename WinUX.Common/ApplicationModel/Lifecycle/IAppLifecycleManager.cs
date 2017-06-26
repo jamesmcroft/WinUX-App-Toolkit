@@ -2,8 +2,6 @@
 {
     using System.Threading.Tasks;
 
-    using Windows.ApplicationModel;
-
     /// <summary>
     /// Defines an interface for an application lifecycle manager.
     /// </summary>
@@ -29,21 +27,21 @@
         /// Suspends all registered suspendable items.
         /// </summary>
         /// <remarks>
-        /// This should be called when the Suspending event handler is invoked from the App.xaml.cs.
+        /// This should be called when the Suspending event handler is invoked.
         /// </remarks>
-        /// <param name="args">
+        /// <param name="suspensionArgs">
         /// The application's suspension arguments.
         /// </param>
         /// <returns>
         /// Returns an awaitable task.
         /// </returns>
-        Task SuspendAsync(SuspendingEventArgs args);
+        Task SuspendAsync(object suspensionArgs);
 
         /// <summary>
         /// Resumes all registered suspendable items.
         /// </summary>
         /// <remarks>
-        /// This should be called when the Resuming event handler is invoked from the App.xaml.cs.
+        /// This should be called when the Resuming event handler is invoked.
         /// </remarks>
         /// <returns>
         /// Returns an awaitable task.

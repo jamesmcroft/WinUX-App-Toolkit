@@ -5,21 +5,12 @@
     using System.Linq;
     using System.Threading.Tasks;
 
-    using Windows.ApplicationModel;
-
     /// <summary>
     /// Defines a provider for managing the suspend and resume lifecycle events of an application.
     /// </summary>
     public class AppLifecycleManager : IAppLifecycleManager
     {
-        private static AppLifecycleManager current;
-
         private readonly List<WeakReference<ISuspendable>> items;
-
-        /// <summary>
-        /// Gets an instance of the <see cref="AppLifecycleManager"/>.
-        /// </summary>
-        public static AppLifecycleManager Current => current ?? (current = new AppLifecycleManager());
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AppLifecycleManager"/> class.
@@ -50,26 +41,24 @@
 
             var existingItem = this.items.FirstOrDefault(
                 x =>
+                {
+                    ISuspendable s;
+                    var exists = x.TryGetTarget(out s);
+
+                    if (exists)
                     {
-                        ISuspendable s;
-                        var exists = x.TryGetTarget(out s);
+                        return s == suspendable;
+                    }
 
-                        if (exists)
-                        {
-                            return s == suspendable;
-                        }
-
-                        return false;
-                    });
+                    return false;
+                });
 
             this.items.Remove(existingItem);
         }
 
         /// <inheritdoc />
-        public async Task SuspendAsync(SuspendingEventArgs args)
+        public virtual Task SuspendAsync(object suspensionArgs)
         {
-            var suspendingDeferral = args.SuspendingOperation.GetDeferral();
-
             var suspendables = new List<WeakReference<ISuspendable>>();
             var suspendTasks = new List<Task>();
 
@@ -102,9 +91,7 @@
                 }
             }
 
-            await Task.WhenAll(suspendTasks);
-
-            suspendingDeferral.Complete();
+            return Task.WhenAll(suspendTasks);
         }
 
         /// <inheritdoc />
