@@ -53,6 +53,18 @@
         /// A Windows Holographic device, e.g. Microsoft HoloLens.
         /// </summary>
         [Description("Windows Holographic")]
-        Holographic
+        Holographic,
+
+        /// <summary>
+        /// An Android device, e.g. Samsung Galaxy.
+        /// </summary>
+        [Description("Android")]
+        Android,
+
+        /// <summary>
+        /// An iOS device, e.g. iPhone or iPad.
+        /// </summary>
+        [Description("iOS")]
+        iOS
     }
 }

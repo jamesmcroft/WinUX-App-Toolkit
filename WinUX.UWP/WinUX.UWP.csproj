@@ -155,7 +155,6 @@
     <Compile Include="Design\Material\ColorSwatches\RedColorSwatch.cs" />
     <Compile Include="Design\Material\ColorSwatches\TealColorSwatch.cs" />
     <Compile Include="Design\Material\ColorSwatches\YellowColorSwatch.cs" />
-    <Compile Include="Device\Profile\DeviceType.cs" />
     <Compile Include="Device\Sensors\LuxHelper.cs" />
     <Compile Include="Diagnostics\AppDiagnostics.cs" />
     <Compile Include="Diagnostics\IAppDiagnostics.cs" />

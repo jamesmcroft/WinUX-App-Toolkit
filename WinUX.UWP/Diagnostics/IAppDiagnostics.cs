@@ -4,11 +4,18 @@
 
     using Windows.Storage;
 
+    using WinUX.Diagnostics.Tracing;
+
     /// <summary>
     /// Defines an interface for an app diagnostics provider.
     /// </summary>
     public interface IAppDiagnostics
     {
+        /// <summary>
+        /// Gets an instance of the event logger.
+        /// </summary>
+        IEventLogger EventLogger { get; }
+
         /// <summary>
         /// Gets the file used for application diagnostic messages.
         /// </summary>

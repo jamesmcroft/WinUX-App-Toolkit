@@ -139,7 +139,9 @@
             }
             catch (Exception ex)
             {
-                EventLogger.Current.WriteError(ex.Message);
+#if DEBUG
+                System.Diagnostics.Debug.WriteLine(ex.ToString());
+#endif
             }
         }
 
@@ -214,8 +216,12 @@
             var sourcePageType = Type.GetType(sourcePageName);
             if (sourcePageType != null) return await CreateNewWindowForPageAsync(sourcePageType, parameter, desiredSize);
 
-            EventLogger.Current.WriteDebug(
-                $"Couldn't create new Window for the type {sourcePageName} as it does not exist.");
+            {
+#if DEBUG
+                System.Diagnostics.Debug.WriteLine(
+                    $"Couldn't create new Window for the type {sourcePageName} as it does not exist.");
+#endif
+            }
 
             return false;
         }

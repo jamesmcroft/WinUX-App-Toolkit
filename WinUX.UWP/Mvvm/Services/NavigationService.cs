@@ -81,7 +81,9 @@
 
         private static void Frame_OnNavigationFailed(object sender, NavigationFailedEventArgs e)
         {
-            EventLogger.Current.WriteError($"Failed to load Page {e.SourcePageType.FullName}.");
+#if DEBUG
+            System.Diagnostics.Debug.WriteLine($"Failed to load Page {e.SourcePageType.FullName}.");
+#endif
         }
 
         /// <summary>
@@ -194,7 +196,10 @@
             var sourcePageType = Type.GetType(sourcePageName);
             if (sourcePageType != null) return this.Navigate(sourcePageType, parameter, transition);
 
-            EventLogger.Current.WriteDebug($"Couldn't navigate to the type {sourcePageName} as it does not exist.");
+#if DEBUG
+            System.Diagnostics.Debug.WriteLine($"Couldn't navigate to the type {sourcePageName} as it does not exist.");
+#endif
+
             return false;
         }
 
@@ -253,8 +258,10 @@
             }
             else
             {
-                EventLogger.Current.WriteDebug(
-                    $"Couldn't remove navigation to the type {sourcePageName} as it does not exist.");
+#if DEBUG
+                System.Diagnostics.Debug.WriteLine( $"Couldn't remove navigation to the type {sourcePageName} as it does not exist.");
+#endif
+
             }
 
             this.UpdateBackButtonVisibility();
@@ -289,8 +296,10 @@
             var sourcePageType = Type.GetType(sourcePageName);
             if (sourcePageType != null) return this.HasPreviouslyNavigatedTo(sourcePageType);
 
-            EventLogger.Current.WriteDebug(
-                $"Couldn't check if previously navigated to the type {sourcePageName} as it does not exist.");
+#if DEBUG
+            System.Diagnostics.Debug.WriteLine($"Couldn't check if previously navigated to the type {sourcePageName} as it does not exist.");
+#endif
+
             return false;
         }
 

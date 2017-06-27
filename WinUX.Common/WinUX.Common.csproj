@@ -48,6 +48,8 @@
     <Compile Include="Common\Date\StateOfDay.cs" />
     <Compile Include="Design\AccentColor.cs" />
     <Compile Include="Design\Material\ColorSwatches\IMaterialColorSwatch.cs" />
+    <Compile Include="Device\Profile\DeviceType.cs" />
+    <Compile Include="Diagnostics\Tracing\IEventLogger.cs" />
     <Compile Include="Maths\MathConstants.cs" />
     <Compile Include="Common\ParseHelper.cs" />
     <Compile Include="Common\WeakReferenceCallback.cs" />

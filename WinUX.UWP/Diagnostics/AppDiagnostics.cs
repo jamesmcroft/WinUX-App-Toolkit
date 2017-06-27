@@ -14,14 +14,21 @@
     /// </summary>
     public class AppDiagnostics : IAppDiagnostics
     {
-        private static AppDiagnostics current;
+        private StorageFileEventListener listener;
 
         /// <summary>
-        /// Gets an instance of the <see cref="AppDiagnostics"/>.
+        /// Initializes a new instance of the <see cref="AppDiagnostics"/> class.
         /// </summary>
-        public static AppDiagnostics Current => current ?? (current = new AppDiagnostics());
+        /// <param name="eventLogger">
+        /// An instance of an <see cref="IEventLogger"/>.
+        /// </param>
+        public AppDiagnostics(IEventLogger eventLogger)
+        {
+            this.EventLogger = eventLogger;
+        }
 
-        private StorageFileEventListener listener;
+        /// <inheritdoc />
+        public IEventLogger EventLogger { get; }
 
         /// <inheritdoc />
         public StorageFile DiagnosticsFile { get; private set; }
@@ -39,8 +46,8 @@
 
             await this.SetupEventListener();
 
-            Application.Current.UnhandledException += OnAppUnhandledExceptionThrown;
-            TaskScheduler.UnobservedTaskException += OnAppUnobservedTaskExceptionThrown;
+            Application.Current.UnhandledException += this.OnAppUnhandledExceptionThrown;
+            TaskScheduler.UnobservedTaskException += this.OnAppUnobservedTaskExceptionThrown;
 
             this.IsRecording = true;
         }
@@ -53,49 +60,39 @@
                 return;
             }
 
-            Application.Current.UnhandledException -= OnAppUnhandledExceptionThrown;
-            TaskScheduler.UnobservedTaskException -= OnAppUnobservedTaskExceptionThrown;
+            Application.Current.UnhandledException -= this.OnAppUnhandledExceptionThrown;
+            TaskScheduler.UnobservedTaskException -= this.OnAppUnobservedTaskExceptionThrown;
 
             this.IsRecording = false;
         }
 
-        private static void OnAppUnobservedTaskExceptionThrown(object sender, UnobservedTaskExceptionEventArgs args)
+        private void OnAppUnobservedTaskExceptionThrown(object sender, UnobservedTaskExceptionEventArgs args)
         {
             args.SetObserved();
 
-            if (args.Exception != null)
-            {
-                EventLogger.Current.WriteCritical($"Unobserved task exception thrown. Error: '{args.Exception}'");
-
-                if (!string.IsNullOrWhiteSpace(args.Exception.StackTrace))
-                {
-                    EventLogger.Current.WriteInfo($"StackTrace: {args.Exception.StackTrace}");
-                }
-            }
-            else
-            {
-                EventLogger.Current.WriteCritical(
-                    "Unobserved task exception thrown. No exception information available.");
-            }
+            this.EventLogger.WriteCritical(
+                args.Exception != null
+                    ? $"Unobserved task exception thrown. Error: '{args.Exception}'"
+                    : "Unobserved task exception thrown. Error: 'No exception information available.'");
         }
 
-        private static void OnAppUnhandledExceptionThrown(object sender, UnhandledExceptionEventArgs args)
+        private void OnAppUnhandledExceptionThrown(object sender, UnhandledExceptionEventArgs args)
         {
             args.Handled = true;
-            EventLogger.Current.WriteCritical($"Unhandled exception thrown. Error: '{args.Message}'");
+            this.EventLogger.WriteCritical($"Unhandled exception thrown. Error: '{args.Message}'");
         }
 
         private async Task SetupEventListener()
         {
             this.DiagnosticsFile =
                 await ApplicationData.Current.LocalFolder.CreateFileAsync(
-                    $"diag-{DateTime.Now:dd-MM-yyyy}.txt",
+                    $"EventLogger-{DateTime.Now:yyyyMMdd}.txt",
                     CreationCollisionOption.OpenIfExists);
 
             this.listener = new StorageFileEventListener(this.DiagnosticsFile);
-            this.listener.EnableEvents(EventLogger.Current, EventLevel.Verbose);
+            this.listener.EnableEvents(this.EventLogger as EventSource, EventLevel.Verbose);
 
-            EventLogger.Current.WriteInfo("Application diagnostics initialized.");
+            this.EventLogger.WriteInfo("Application diagnostics initialized.");
         }
     }
 }

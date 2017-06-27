@@ -42,7 +42,9 @@
             }
             catch (Exception ex)
             {
-                EventLogger.Current.WriteError(ex.Message);
+#if DEBUG
+                System.Diagnostics.Debug.WriteLine(ex.ToString());
+#endif
             }
         }
 

@@ -21,7 +21,7 @@
         private readonly CoreDispatcher dispatcher;
 
         private SemaphoreSlim semaphore = new SemaphoreSlim(1);
-        
+
         /// <summary>
         /// Initializes a new instance of the <see cref="MessageDialogManager"/> class.
         /// </summary>
@@ -185,7 +185,10 @@
                             {
                                 var dialog = new MessageDialog(message)
                                                  {
-                                                     Title = string.IsNullOrWhiteSpace(title) ? "Message" : title
+                                                     Title =
+                                                         string.IsNullOrWhiteSpace(title)
+                                                             ? "Message"
+                                                             : title
                                                  };
 
                                 if (commands != null)
@@ -200,7 +203,9 @@
                             }
                             catch (Exception ex)
                             {
-                                EventLogger.Current.WriteError(ex.Message);
+#if DEBUG
+                                System.Diagnostics.Debug.WriteLine(ex.ToString());
+#endif
                             }
                             finally
                             {
@@ -213,7 +218,9 @@
             }
             catch (Exception ex)
             {
-                EventLogger.Current.WriteError(ex.Message);
+#if DEBUG
+                System.Diagnostics.Debug.WriteLine(ex.ToString());
+#endif
             }
         }
 

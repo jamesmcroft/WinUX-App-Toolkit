@@ -29,7 +29,7 @@
         }
 
         /// <summary>
-        /// Gets the current log file.
+        /// Gets the storage file that is used to store the application log.
         /// </summary>
         public StorageFile File { get; }
 
@@ -62,8 +62,10 @@
                         }
                         catch (Exception ex)
                         {
-                            EventLogger.Current.WriteError(
-                                $"An exception was thrown while attempting to write to the log file. Error: '{ex.Message}'.");
+#if DEBUG
+                            System.Diagnostics.Debug.WriteLine(
+                                $"An exception was thrown while attempting to write to the log file. Error: '{ex}'.");
+#endif
                         }
                         finally
                         {
