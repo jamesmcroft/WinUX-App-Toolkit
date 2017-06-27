@@ -2,7 +2,7 @@
 {
     using System;
 
-    using Windows.UI;
+    using Android.Graphics;
 
     internal sealed class GreyColorSwatch : IMaterialColorSwatch<Color>
     {

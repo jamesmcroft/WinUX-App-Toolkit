@@ -35,12 +35,19 @@
     <DocumentationFile>bin\Release\WinUX.Common.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ApplicationModel\Lifecycle\AppLifecycleManager.cs" />
+    <Compile Include="ApplicationModel\Lifecycle\IAppLifecycleManager.cs" />
+    <Compile Include="ApplicationModel\Lifecycle\ISuspendable.cs" />
+    <Compile Include="ApplicationModel\Resourcing\IResourceManager.cs" />
+    <Compile Include="ApplicationModel\Resourcing\ResourceManager.cs" />
     <Compile Include="Attributes\DescriptionAttribute.cs" />
     <Compile Include="Collections\Generic\GenericEqualityComparer.cs" />
     <Compile Include="Collections\Generic\LimitedList.cs" />
     <Compile Include="Collections\ObjectModel\NotifyCollectionItemPropertyChanged.cs" />
     <Compile Include="Collections\ObjectModel\ObservableItemCollection.cs" />
     <Compile Include="Common\Date\StateOfDay.cs" />
+    <Compile Include="Design\AccentColor.cs" />
+    <Compile Include="Design\Material\ColorSwatches\IMaterialColorSwatch.cs" />
     <Compile Include="Maths\MathConstants.cs" />
     <Compile Include="Common\ParseHelper.cs" />
     <Compile Include="Common\WeakReferenceCallback.cs" />
@@ -102,6 +109,7 @@
     <Compile Include="Extensions\Extensions.Conversions.cs" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

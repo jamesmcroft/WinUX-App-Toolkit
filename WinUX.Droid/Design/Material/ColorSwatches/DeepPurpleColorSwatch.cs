@@ -1,6 +1,6 @@
 ﻿namespace WinUX.Design.Material.ColorSwatches
 {
-    using Windows.UI;
+    using Android.Graphics;
 
     internal sealed class DeepPurpleColorSwatch : IMaterialColorSwatch<Color>
     {

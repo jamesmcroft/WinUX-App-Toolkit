@@ -44,6 +44,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Design\Material\ColorSwatches\AmberColorSwatch.cs" />
+    <Compile Include="Design\Material\ColorSwatches\BlueColorSwatch.cs" />
+    <Compile Include="Design\Material\ColorSwatches\BlueGreyColorSwatch.cs" />
+    <Compile Include="Design\Material\ColorSwatches\BrownColorSwatch.cs" />
+    <Compile Include="Design\Material\ColorSwatches\CyanColorSwatch.cs" />
+    <Compile Include="Design\Material\ColorSwatches\DeepOrangeColorSwatch.cs" />
+    <Compile Include="Design\Material\ColorSwatches\DeepPurpleColorSwatch.cs" />
+    <Compile Include="Design\Material\ColorSwatches\GreenColorSwatch.cs" />
+    <Compile Include="Design\Material\ColorSwatches\GreyColorSwatch.cs" />
+    <Compile Include="Design\Material\ColorSwatches\IndigoColorSwatch.cs" />
+    <Compile Include="Design\Material\ColorSwatches\LightBlueColorSwatch.cs" />
+    <Compile Include="Design\Material\ColorSwatches\LightGreenColorSwatch.cs" />
+    <Compile Include="Design\Material\ColorSwatches\LimeColorSwatch.cs" />
+    <Compile Include="Design\Material\ColorSwatches\OrangeColorSwatch.cs" />
+    <Compile Include="Design\Material\ColorSwatches\PinkColorSwatch.cs" />
+    <Compile Include="Design\Material\ColorSwatches\PurpleColorSwatch.cs" />
+    <Compile Include="Design\Material\ColorSwatches\RedColorSwatch.cs" />
+    <Compile Include="Design\Material\ColorSwatches\TealColorSwatch.cs" />
+    <Compile Include="Design\Material\ColorSwatches\YellowColorSwatch.cs" />
+    <Compile Include="Design\Material\MaterialDesignColors.cs" />
+    <Compile Include="Extensions\Extensions.Color.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

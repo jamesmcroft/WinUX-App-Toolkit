@@ -1,6 +1,6 @@
 ﻿namespace WinUX.Design.Material.ColorSwatches
 {
-    using Windows.UI;
+    using Android.Graphics;
 
     /// <summary>
     /// Defines the blue material design color swatch.

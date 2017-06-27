@@ -117,10 +117,8 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationModel\Lifecycle\IAppLifecycleManager.cs" />
-    <Compile Include="ApplicationModel\Lifecycle\ISuspendable.cs" />
-    <Compile Include="ApplicationModel\Lifecycle\AppLifecycleManager.cs" />
-    <Compile Include="ApplicationModel\Resources\ResourceHandler.cs" />
+    <Compile Include="ApplicationModel\Lifecycle\WindowsAppLifecycleManager.cs" />
+    <Compile Include="ApplicationModel\Resources\WindowsResourceManager.cs" />
     <Compile Include="Application\AppPackageFamilyNames.cs" />
     <Compile Include="Application\AppLauncher.cs" />
     <Compile Include="Application\ViewManagement\ViewCoreDispatcherManager.cs" />
@@ -137,8 +135,6 @@
     <Compile Include="Controls\MapElement\Extensions\Extensions.Data.cs" />
     <Compile Include="Controls\ScrollViewer\ScrollViewerMode.cs" />
     <Compile Include="Controls\ToggleButton\Extensions\Extensions.Grouping.cs" />
-    <Compile Include="Design\AccentColor.cs" />
-    <Compile Include="Design\Material\ColorSwatches\IMaterialColorSwatch.cs" />
     <Compile Include="Design\Material\MaterialDesignColors.cs" />
     <Compile Include="Design\Material\ColorSwatches\AmberColorSwatch.cs" />
     <Compile Include="Design\Material\ColorSwatches\BlueColorSwatch.cs" />

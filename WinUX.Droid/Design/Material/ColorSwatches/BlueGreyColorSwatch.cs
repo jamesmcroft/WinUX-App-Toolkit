@@ -2,7 +2,7 @@
 {
     using System;
 
-    using Windows.UI;
+    using Android.Graphics;
 
     /// <summary>
     /// Defines the blue-grey material design color swatch.
