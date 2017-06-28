@@ -9,8 +9,6 @@
     using Windows.UI.Xaml.Media.Animation;
     using Windows.UI.Xaml.Navigation;
 
-    using WinUX.Diagnostics.Tracing;
-
     /// <summary>
     /// Defines a basic navigation service handler for Windows applications.
     /// </summary>

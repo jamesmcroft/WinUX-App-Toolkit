@@ -9,7 +9,6 @@
     using Windows.UI.Xaml.Navigation;
 
     using WinUX.Device.Profile;
-    using WinUX.Diagnostics.Tracing;
     using WinUX.Xaml;
 
     /// <summary>

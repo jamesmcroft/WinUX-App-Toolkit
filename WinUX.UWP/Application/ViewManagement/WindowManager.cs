@@ -10,7 +10,6 @@
     using Windows.UI.Xaml;
     using Windows.UI.Xaml.Controls;
 
-    using WinUX.Diagnostics.Tracing;
     using WinUX.Messaging.Dialogs;
     using WinUX.Mvvm.Services;
 

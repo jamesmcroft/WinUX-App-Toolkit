@@ -1,4 +1,4 @@
-﻿namespace WinUX
+﻿namespace WinUX.Geolocation
 {
     using System;
 

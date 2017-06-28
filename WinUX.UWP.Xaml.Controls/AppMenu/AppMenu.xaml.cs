@@ -15,7 +15,6 @@
     using WinUX.Collections.ObjectModel;
     using WinUX.Data;
     using WinUX.Data.Serialization;
-    using WinUX.Diagnostics.Tracing;
 
     /// <summary>
     /// Defines a control for providing an application menu system.

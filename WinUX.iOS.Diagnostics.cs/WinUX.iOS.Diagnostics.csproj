@@ -5,12 +5,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A675F405-142D-4571-BB93-FEFC702514B8}</ProjectGuid>
+    <ProjectGuid>{9FAFD819-DF73-4953-940E-E37F1550197B}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>WinUX.iOS.Geolocation</RootNamespace>
+    <RootNamespace>WinUX.Diagnostics</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>WinUX.iOS.Geolocation</AssemblyName>
+    <AssemblyName>WinUX.iOS.Diagnostics</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,6 +31,9 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -38,11 +41,11 @@
     <Reference Include="XPlat.Core, Version=1.2.17139.2, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\XPlat.Core.1.2.17139.2\lib\portable-net451+win81+MonoAndroid10+xamarinios10+MonoTouch10\XPlat.Core.dll</HintPath>
     </Reference>
-    <Reference Include="XPlat.Device.Geolocation.Common, Version=1.2.17139.2, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\XPlat.Device.Geolocation.1.2.17139.2\lib\Xamarin.iOS10\XPlat.Device.Geolocation.Common.dll</HintPath>
+    <Reference Include="XPlat.Storage.Common, Version=1.2.17139.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\XPlat.Storage.1.2.17139.2\lib\Xamarin.iOS10\XPlat.Storage.Common.dll</HintPath>
     </Reference>
-    <Reference Include="XPlat.Device.Geolocation.iOS, Version=1.2.17139.2, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\XPlat.Device.Geolocation.1.2.17139.2\lib\Xamarin.iOS10\XPlat.Device.Geolocation.iOS.dll</HintPath>
+    <Reference Include="XPlat.Storage.iOS, Version=1.2.17139.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\XPlat.Storage.1.2.17139.2\lib\Xamarin.iOS10\XPlat.Storage.iOS.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -50,6 +53,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tracing\EventLogger.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WinUX.Common.Diagnostics\WinUX.Common.Diagnostics.csproj">
+      <Project>{c7578b09-e95f-48a3-ac70-931d3829064c}</Project>
+      <Name>WinUX.Common.Diagnostics</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

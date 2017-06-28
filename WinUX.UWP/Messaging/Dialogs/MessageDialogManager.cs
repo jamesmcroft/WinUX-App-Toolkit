@@ -8,7 +8,6 @@
     using Windows.UI.Popups;
 
     using WinUX.Application.ViewManagement;
-    using WinUX.Diagnostics.Tracing;
     using WinUX.Xaml;
 
     /// <summary>

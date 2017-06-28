@@ -5,12 +5,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{473A4071-9C9D-41AC-9CB8-16593F58AC3C}</ProjectGuid>
+    <ProjectGuid>{1AC2D23C-7DC3-490B-9717-16FA4F41AF77}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WinUX.Geolocation</RootNamespace>
-    <AssemblyName>WinUX.Droid.Geolocation</AssemblyName>
+    <RootNamespace>WinUX.Diagnostics</RootNamespace>
+    <AssemblyName>WinUX.Droid.Diagnostics</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
@@ -38,6 +38,9 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -45,22 +48,22 @@
     <Reference Include="XPlat.Core, Version=1.2.17139.2, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\XPlat.Core.1.2.17139.2\lib\portable-net451+win81+MonoAndroid10+xamarinios10+MonoTouch10\XPlat.Core.dll</HintPath>
     </Reference>
-    <Reference Include="XPlat.Device.Geolocation.Common, Version=1.2.17139.2, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\XPlat.Device.Geolocation.1.2.17139.2\lib\MonoAndroid10\XPlat.Device.Geolocation.Common.dll</HintPath>
+    <Reference Include="XPlat.Storage.Common, Version=1.2.17139.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\XPlat.Storage.1.2.17139.2\lib\MonoAndroid10\XPlat.Storage.Common.dll</HintPath>
     </Reference>
-    <Reference Include="XPlat.Device.Geolocation.Droid, Version=1.2.17139.2, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\XPlat.Device.Geolocation.1.2.17139.2\lib\MonoAndroid10\XPlat.Device.Geolocation.Droid.dll</HintPath>
+    <Reference Include="XPlat.Storage.Droid, Version=1.2.17139.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\XPlat.Storage.1.2.17139.2\lib\MonoAndroid10\XPlat.Storage.Droid.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Extensions\Extensions.Geography.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tracing\EventLogger.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WinUX.Common\WinUX.Common.csproj">
-      <Project>{1a3ddb66-0155-4c26-9eac-72037fa85c3c}</Project>
-      <Name>WinUX.Common</Name>
+    <ProjectReference Include="..\WinUX.Common.Diagnostics\WinUX.Common.Diagnostics.csproj">
+      <Project>{c7578b09-e95f-48a3-ac70-931d3829064c}</Project>
+      <Name>WinUX.Common.Diagnostics</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
