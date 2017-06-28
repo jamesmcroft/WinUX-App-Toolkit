@@ -4,20 +4,11 @@
 
     using Windows.Networking.Connectivity;
 
-    using WinUX.Diagnostics.Tracing;
-
     /// <summary>
     /// Defines a helper for the current network status of the device running the application.
     /// </summary>
     public sealed class NetworkStatusManager : INetworkStatusManager
     {
-        private static NetworkStatusManager current;
-
-        /// <summary>
-        /// Gets an instance of the <see cref="NetworkStatusManager"/>.
-        /// </summary>
-        public static NetworkStatusManager Current => current ?? (current = new NetworkStatusManager());
-
         /// <inheritdoc />
         public event NetworkStatusChangedEventHandler NetworkStatusChanged;
 
