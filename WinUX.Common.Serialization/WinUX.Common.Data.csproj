@@ -5,10 +5,10 @@
     <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B1685465-0127-47DA-BAED-C0BF21B9DB17}</ProjectGuid>
+    <ProjectGuid>{DC31D9BB-7BB7-4AB6-829B-47E23F187DC3}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>WinUX.Networking</RootNamespace>
-    <AssemblyName>WinUX.Common.Networking</AssemblyName>
+    <RootNamespace>WinUX.Data</RootNamespace>
+    <AssemblyName>WinUX.Common.Data</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -33,31 +33,29 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <!-- A reference to the entire .NET Framework is automatically included -->
-    <ProjectReference Include="..\WinUX.Common.Serialization\WinUX.Common.Data.csproj">
-      <Project>{dc31d9bb-7bb7-4ab6-829b-47e23f187dc3}</Project>
-      <Name>WinUX.Common.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WinUX.Common\WinUX.Common.csproj">
-      <Project>{1a3ddb66-0155-4c26-9eac-72037fa85c3c}</Project>
-      <Name>WinUX.Common</Name>
-    </ProjectReference>
+    <Compile Include="Serialization\ISerializationService.cs" />
+    <Compile Include="Serialization\JsonSerializationService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serialization\SerializationFormatting.cs" />
+    <Compile Include="Serialization\SerializationService.cs" />
+    <Compile Include="Validation\Rules\DateTimeValidationRule.cs" />
+    <Compile Include="Validation\Rules\DecimalValidationRule.cs" />
+    <Compile Include="Validation\Rules\DoubleValidationRule.cs" />
+    <Compile Include="Validation\Rules\EmailValidationRule.cs" />
+    <Compile Include="Validation\Rules\IntValidationRule.cs" />
+    <Compile Include="Validation\Rules\RegexValidationRule.cs" />
+    <Compile Include="Validation\Rules\UrlValidationRule.cs" />
+    <Compile Include="Validation\ValidationRule.cs" />
+    <Compile Include="Validation\ValidationRules.cs" />
+    <Compile Include="ValueChanged.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="INetworkRequestManager.cs" />
-    <Compile Include="INetworkStatusManager.cs" />
-    <Compile Include="MobileNetworkConnectionType.cs" />
-    <Compile Include="NetworkConnectionType.cs" />
-    <Compile Include="NetworkRequestManager.cs" />
-    <Compile Include="NetworkStatus.cs" />
-    <Compile Include="NetworkStatusChanged.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Requests\Json\JsonDeleteNetworkRequest.cs" />
-    <Compile Include="Requests\Json\JsonGetNetworkRequest.cs" />
-    <Compile Include="Requests\Json\JsonPostNetworkRequest.cs" />
-    <Compile Include="Requests\Json\JsonPutNetworkRequest.cs" />
-    <Compile Include="Requests\NetworkRequest.cs" />
-    <Compile Include="Requests\NetworkRequestCallback.cs" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>

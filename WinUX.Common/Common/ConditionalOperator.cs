@@ -1,4 +1,4 @@
-﻿namespace WinUX.Data
+﻿namespace WinUX.Common
 {
     /// <summary>
     /// Defines the enumeration values for conditional operators.

@@ -147,6 +147,10 @@
     <EmbeddedResource Include="Properties\WinUX.UWP.Xaml.Controls.rd.xml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\WinUX.Common.Serialization\WinUX.Common.Data.csproj">
+      <Project>{dc31d9bb-7bb7-4ab6-829b-47e23f187dc3}</Project>
+      <Name>WinUX.Common.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WinUX.Common\WinUX.Common.csproj">
       <Project>{1a3ddb66-0155-4c26-9eac-72037fa85c3c}</Project>
       <Name>WinUX.Common</Name>

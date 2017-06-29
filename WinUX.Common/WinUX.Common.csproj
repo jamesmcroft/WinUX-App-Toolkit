@@ -53,21 +53,7 @@
     <Compile Include="Common\ParseHelper.cs" />
     <Compile Include="Common\WeakReferenceCallback.cs" />
     <Compile Include="Common\WeakEventListener.cs" />
-    <Compile Include="Data\ConditionalOperator.cs" />
-    <Compile Include="Data\Serialization\ISerializationService.cs" />
-    <Compile Include="Data\Serialization\JsonSerializationService.cs" />
-    <Compile Include="Data\Serialization\SerializationFormatting.cs" />
-    <Compile Include="Data\Serialization\SerializationService.cs" />
-    <Compile Include="Data\Validation\Rules\DateTimeValidationRule.cs" />
-    <Compile Include="Data\Validation\Rules\DecimalValidationRule.cs" />
-    <Compile Include="Data\Validation\Rules\DoubleValidationRule.cs" />
-    <Compile Include="Data\Validation\Rules\EmailValidationRule.cs" />
-    <Compile Include="Data\Validation\Rules\IntValidationRule.cs" />
-    <Compile Include="Data\Validation\Rules\RegexValidationRule.cs" />
-    <Compile Include="Data\Validation\Rules\UrlValidationRule.cs" />
-    <Compile Include="Data\Validation\ValidationRule.cs" />
-    <Compile Include="Data\Validation\ValidationRules.cs" />
-    <Compile Include="Data\ValueChanged.cs" />
+    <Compile Include="Common\ConditionalOperator.cs" />
     <Compile Include="Exceptions\UnexpectedNullPropertyException.cs" />
     <Compile Include="Extensions\Extensions.Attribute.cs" />
     <Compile Include="Extensions\Extensions.Collection.cs" />
@@ -92,14 +78,7 @@
     <Compile Include="Threading\Tasks\TaskSchedulerAwaiter.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Extensions\Extensions.Conversions.cs" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

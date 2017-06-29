@@ -8,7 +8,7 @@
 
     using Microsoft.Xaml.Interactivity;
 
-    using WinUX.Data;
+    using WinUX.Common;
 
     /// <summary>
     /// Defines an action which is executed depending on the conditions.
